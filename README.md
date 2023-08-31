@@ -14,7 +14,9 @@ TODO
 
 ## Uge 1 (kalenderuge 35)
 
-- [Opgaver](https://github.com/dnhansen/maalteori/blob/main/uge01.pdf)
+### Opgaver
+
+[Løsningsforslag](https://github.com/dnhansen/maalteori/blob/main/uge01.pdf)
 
 ### Faglige kommentarer
 
@@ -28,7 +30,15 @@ Ingen aflevering i denne uge.
 
 ## Uge 2 (kalenderuge 36)
 
-- [Opgaver](https://github.com/dnhansen/maalteori/blob/main/uge02.pdf) (uploades efter TØ)
+### Opgaver
+
+- 1.3: Vigtig.
+- 1.4: Vigtig.
+- 1.5: Mindre vigtig.
+- 1.7: Mindre vigtig.
+- 1.9: Hvis begreberne lim sup og lim inf for følger af reelle tal volder problemer, så er det vigtigere at få styr på disse begreber. Dette er nok højeste prioritet når I har lavet 1.3 og måske 1.4. Se appendiks A.5, men vi skal også nok snakke om det til TØ.
+
+[Løsningsforslag](https://github.com/dnhansen/maalteori/blob/main/uge02.pdf) (uploades efter TØ)
 
 ### Faglige kommentarer
 
