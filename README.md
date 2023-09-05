@@ -7,11 +7,6 @@ Afleveringsfrist: TBD, søndag 23:59 indtil videre
 For kontaktinformationer se Brightspace.
 
 
-## Diverse noter
-
-TODO
-
-
 ## Uge 1 (kalenderuge 35)
 
 ### Opgaver
@@ -36,12 +31,26 @@ Ingen aflevering i denne uge.
 - 1.4: Vigtig.
 - 1.5: Mindre vigtig.
 - 1.7: Mindre vigtig.
-- 1.9: Hvis begreberne lim sup og lim inf for følger af reelle tal volder problemer, så er det vigtigere at få styr på disse begreber. Dette er nok højeste prioritet når I har lavet 1.3 og måske 1.4. Se appendiks A.5, men vi skal også nok snakke om det til TØ.
+- 1.9: Hvis begreberne lim sup og lim inf for følger af reelle tal volder problemer, så er det vigtigere at få styr på disse begreber. Dette er nok højeste prioritet når I har lavet 1.3 og måske 1.4. Se appendiks A.5, men vi skal også nok snakke om det til TØ. Brug derudover også tiden på at genopfriske begreber fra første år, herunder: konvergens af følger og rækker, åbne og lukkede mængder, følgelukkethed, kontinuitet og følgekontinuitet.
 
 [Løsningsforslag](https://github.com/dnhansen/maalteori/blob/main/uge02.pdf) (uploades efter TØ)
 
-### Faglige kommentarer
 
 ### Andre bemærkninger
 
 Første aflevering afleveres søndag d. 10. september kl. 23:59 (TBD).
+
+
+## Uge 3 (kalenderuge 37)
+
+### Opgaver
+
+- 1.8: "Lidt svær", som det fremgår på ugesedlen. En god øvelse, men ikke en prioritet.
+- 1.10: Vigtig. Træner både mængdelære (som i uge 1) og grundlæggende egenskaber ved mål.
+- 1.12: Vigtig.
+- 1.13: Mindre vigtig, om ikke andet fordi argumentet simpelthen er sværere.
+- 1.15: Mindre vigtig.
+- 1.16: Mindre vigtig. Dette resultat vises også senere i bogen (jf. Sætning 7.2.6).
+- 1.19: Vigtig (på trods af at denne åbenbart er en "ekstraopgave").
+
+[Løsningsforslag](https://github.com/dnhansen/maalteori/blob/main/uge03.pdf) (uploades efter TØ)
