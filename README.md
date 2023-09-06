@@ -2,7 +2,7 @@
 
 ## Praktiske informationer
 
-Afleveringsfrist: TBD, søndag 23:59 indtil videre
+Afleveringsfrist: søndag 23:59
 
 For kontaktinformationer se Brightspace.
 
@@ -39,7 +39,7 @@ Ingen aflevering i denne uge.
 
 ### Andre bemærkninger
 
-Første aflevering afleveres søndag d. 10. september kl. 23:59 (TBD).
+Første aflevering afleveres søndag d. 10. september kl. 23:59.
 
 
 ## Uge 3 (kalenderuge 37)
