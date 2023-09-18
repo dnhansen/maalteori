@@ -60,3 +60,26 @@ Første aflevering afleveres søndag d. 10. september kl. 23:59.
 ### Andre bemærkninger
 
 Anden aflevering afleveres søndag d. 17. september kl. 23:59. Eventuelle genafleveringer af første aflevering afleveres på samme tidspunkt.
+
+
+## Uge 4 (kalenderuge 38)
+
+### Opgaver
+
+Bemærk at vigtigheden af opgaverne ikke nødvenligvis afspejler rækkefølgen hvori det er bedst at løse dem.
+
+- 1.18: Mindst vigtig, men god træning.
+- 1.21: Mindre vigtig.
+- 1.22: Meget vigtig. Hvis $\mu$ er et sandsynlighedsmål, da er $F_\mu$ den såkaldte *fordelingsfunktion* for $\mu$. Denne er naturligvis vigtig i sandsynlighedsteori. Denne slags konstruktioner bliver også vigtige i forbindelse med konstruktionen af Lebesguemålet.
+- 4.1: Vigtig.
+- 4.3: Vigtig.
+- 4.4: Mindre vigtig.
+- 4.6: Meget vigtig.
+- 4.7: Vigtig.
+
+[Løsningsforslag](uge04.pdf) (uploades efter TØ)
+
+
+### Andre bemærkninger
+
+Ingen aflevering i denne uge.
