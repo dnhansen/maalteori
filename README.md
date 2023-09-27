@@ -99,7 +99,7 @@ Ingen aflevering i denne uge.
 - 5.4: Vigtig, men mindre vigtig end 5.3. Vink: Se Eksempel 5.2.13.
 - 5.5: Meget vigtig.
 
-[Løsningsforslag](uge05.pdf) (uploades efter TØ)
+[Løsningsforslag](uge05.pdf)
 
 
 ### Andre bemærkninger
