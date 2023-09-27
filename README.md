@@ -49,7 +49,7 @@ Første aflevering afleveres søndag d. 10. september kl. 23:59.
 - 1.8: "Lidt svær", som det fremgår på ugesedlen. En god øvelse, men ikke en prioritet.
 - 1.10: Vigtig. Træner både mængdelære (som i uge 1) og grundlæggende egenskaber ved mål.
 - 1.12: Vigtig.
-- 1.13: Mindre vigtig, om ikke andet fordi argumentet simpelthen er sværere.
+- 1.13: Mindre vigtig, om ikke andet fordi argumentet simpelthen er sværere. Vi benytter her Lemma A.2.14, men beviset for dette er ret teknisk. Et alternativt (og bedre!) bevis findes i løsningsforslaget nedenfor.
 - 1.15: Mindre vigtig.
 - 1.16: Mindre vigtig. Dette resultat vises også senere i bogen (jf. Sætning 7.2.6).
 - 1.19: Vigtig (på trods af at denne åbenbart er en "ekstraopgave").
@@ -77,9 +77,31 @@ Bemærk at vigtigheden af opgaverne ikke nødvenligvis afspejler rækkefølgen h
 - 4.6: Meget vigtig.
 - 4.7: Vigtig.
 
-[Løsningsforslag](uge04.pdf) (uploades efter TØ)
+[Løsningsforslag](uge04.pdf)
 
 
 ### Andre bemærkninger
 
 Ingen aflevering i denne uge.
+
+
+## Uge 5 (kalenderuge 39)
+
+### Opgaver
+
+- 4.8: Meget vigtig. Hvis man kender fremgangsmåden i disse opgaver, er det sædvanligvis ligetil at løse dem. I så fald tror jeg roligt at man kan springe opgaven over. Hvis ikke, er den vigtig.
+- 4.9: Vigtig.
+- 4.11: Mindre vigtig, og relativt svær. Men bid mærke i resultatet, at højre- og venstrekontinuerte funktioner er målelige.
+- 4.14: Vigtig.
+- 4.15: Vigtig, men svær. Resultatet benyttes ikke i dette kursus, men i *Videregående sandsynlighedsteori* benyttes det til at definere såkaldte betingede fordelinger. Kan springes over i første omgang, men bør løses på et tidspunkt. Det er tilladt at antage at $\varphi(X) \in \mathcal{F}$, men resultatet kan vises uden denne antagelse.
+- 5.2: Meget vigtig.
+- 5.3: Vigtig.
+- 5.4: Vigtig, men mindre vigtig end 5.3. Vink: Se Eksempel 5.2.13.
+- 5.5: Meget vigtig.
+
+[Løsningsforslag](uge05.pdf) (uploades efter TØ)
+
+
+### Andre bemærkninger
+
+Aflevering 3 afleveres søndag d. 1. oktober kl. 23:59.
