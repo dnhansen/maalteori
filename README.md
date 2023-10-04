@@ -105,3 +105,25 @@ Ingen aflevering i denne uge.
 ### Andre bemærkninger
 
 Aflevering 3 afleveres søndag d. 1. oktober kl. 23:59.
+
+
+## Uge 6 (kalenderuge 40)
+
+### Opgaver
+
+Opgaverne begynder støt at stige i kompleksitet, men de bliver forhåbentligt også mere konkrete.
+
+- 5.9: Meget vigtig. Del (d) er måske kun vigtig.
+- 5.10: Meget vigtig.
+- 5.11: Vigtig.
+- 5.13: Del (a) er vigtig, del (b) er mindre vigtig.
+- 5.15: Vigtig. Især konklusionerne i del (c) og (d) er vigtige at lægge mærke til.
+- 5.16: Mindre vigtig, men god træning i at beregne konkrete integraler.
+- 5.17: Mindre vigtig, men også god træning i konkrete beregninger.
+
+[Løsningsforslag](uge06.pdf) (uploades efter TØ)
+
+
+### Andre bemærkninger
+
+Aflevering 4 afleveres søndag d. 8. oktober kl. 23:59.
