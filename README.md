@@ -121,7 +121,7 @@ Opgaverne begynder støt at stige i kompleksitet, men de bliver forhåbentligt o
 - 5.16: Mindre vigtig, men god træning i at beregne konkrete integraler.
 - 5.17: Mindre vigtig, men også god træning i konkrete beregninger.
 
-[Løsningsforslag](uge06.pdf) (uploades efter TØ)
+[Løsningsforslag](uge06.pdf)
 
 
 ### Andre bemærkninger
