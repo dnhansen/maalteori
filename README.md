@@ -127,3 +127,28 @@ Opgaverne begynder støt at stige i kompleksitet, men de bliver forhåbentligt o
 ### Andre bemærkninger
 
 Aflevering 4 afleveres søndag d. 8. oktober kl. 23:59.
+
+
+## Uge 7 (kalenderuge 41)
+
+### Opgaver
+
+- 2.1(a,b): Mindre vigtig, men kan måske hjælpe med at forstå forskellene mellem $\sigma$-algebraer og $\delta$-systemer.
+- 2.2: Mindre vigtig, men sjov.
+- 2.4: Meget vigtig.
+- 5.18: Meget vigtig.
+- 5.26: Mindre vigtig, men bemærk del (b).
+- 6.3: Del (a) er meget vigtig, del (b) vigtig.
+- 6.4: Vigtig.
+- 6.5: Vigtig.
+- 6.6: Vigtig, bemærk især del (b).
+- 6.7: Vigtig. Integralet er betydeligt sværere at beregne end i ovenstående opgaver.
+
+Opgaverne fra kapitel 6 omhandler beregning af konkrete integraler, og i hvert fald én af dem bør forsøges løst.
+
+[Løsningsforslag](uge07.pdf)
+
+
+### Andre bemærkninger
+
+Ingen afleveringer før efter ferien.

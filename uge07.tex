@@ -1,0 +1,337 @@
+\newcommand{\doctitle}{Uge 7}
+\newcommand{\docauthor}{Danny Nygård Hansen}
+
+\documentclass[a4paper, 11pt, article, danish, oneside]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage[autostyle, danish=guillemets]{csquotes}
+
+\usepackage[final]{microtype}
+\frenchspacing
+\raggedbottom
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[largesmallcaps]{kpfonts}
+\linespread{1.06}
+\DeclareMathAlphabet\mathfrak{U}{euf}{m}{n}
+\SetMathAlphabet\mathfrak{bold}{U}{euf}{b}{n}
+\usepackage{inconsolata}
+
+\usepackage{hyperref}
+\hypersetup{%
+	pdftitle=\doctitle,
+	pdfauthor={\docauthor},
+    hidelinks,
+}
+
+\usepackage{enumitem}
+\setenumerate[0]{label=\normalfont(\arabic*)}
+\setlist{
+	listparindent=\parindent,
+	parsep=0pt,
+}
+\usepackage{array}
+
+\title{\doctitle}
+\author{\docauthor}
+
+\newcommand{\overbar}[3]{\mkern #1mu\overline{\mkern-#1mu#3\mkern-#2mu}\mkern #2mu}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\extreals}{\overbar{1.5}{1.5}{\reals}}
+\newcommand{\complex}{\mathbb{C}}
+
+
+\usepackage{pgffor}
+
+\newcommand{\rvar}[1]{\mathsf{#1}}
+
+\foreach \x in {A,...,Z}{%
+    \expandafter\xdef\csname cal\x\endcsname{\noexpand\mathcal{\x}}
+    \expandafter\xdef\csname frak\x\endcsname{\noexpand\mathfrak{\x}}
+    \expandafter\xdef\csname rand\x\endcsname{\noexpand\rvar{\x}}
+}
+
+
+\usepackage{etoolbox}
+\newcommand{\blank}{\mathrel{\;\cdot\;}}
+\newcommand{\blankifempty}[1]{\ifstrempty{#1}{\blank}{#1}}
+\DeclarePairedDelimiter{\auxdelimlvert}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\auxdelimlVert}{\lVert}{\rVert}
+\DeclarePairedDelimiterX{\auxdelimanglescomma}[2]{\langle}{\rangle}{#1,#2}
+\newcommand{\abs}[2][]{\auxdelimlvert[#1]{\blankifempty{#2}}}
+\newcommand{\norm}[1]{\auxdelimlVert{\blankifempty{#1}}}
+\newcommand{\inner}[2]{\auxdelimanglescomma{\blankifempty{#1}}{\blankifempty{#2}}}
+
+
+\DeclarePairedDelimiter{\auxdelimparen}{(}{)}
+\DeclarePairedDelimiterX{\auxdelimparencomma}[2]{(}{)}{#1,#2}
+\DeclarePairedDelimiter{\auxdelimbracket}{[}{]}
+\DeclarePairedDelimiterX{\auxdelimbracketcomma}[2]{[}{]}{#1,#2}
+\newcommand{\powerset}[2][]{\calP\auxdelimparen[#1]{#2}}
+\newcommand{\borel}[2][]{\calB\auxdelimparen[#1]{#2}}
+\newcommand{\meas}[2][]{\calM\auxdelimparen[#1]{#2}}
+\newcommand{\measC}[2][]{\calM_\complex\auxdelimparen[#1]{#2}}
+\newcommand{\measpos}[2][]{\meas[#1]{#2}^+}
+\newcommand{\measbound}[2][]{\calM_b\auxdelimparen[#1]{#2}}
+\newcommand{\measboundpos}[2][]{\measbound[#1]{#2}^+}
+
+
+\newcommand{\extmeas}[2][]{\overbar{4.5}{0.5}{\calM}\auxdelimparen[#1]{#2}}
+\newcommand{\extmeaspos}[2][]{\extmeas[#1]{#2}^+}
+\newcommand{\simplemeas}[2][]{\calS\!\calM\auxdelimparen[#1]{#2}}
+\newcommand{\simplemeaspos}[2][]{\simplemeas[#1]{#2}^+}
+\newcommand{\sigmaalg}[2][]{\sigma\auxdelimparen[#1]{#2}}
+\newcommand{\deltasys}[2][]{\delta\auxdelimparen[#1]{#2}}
+
+\newcommand{\expval}[2][]{\mathbb{E}\auxdelimbracket[#1]{#2}}
+\newcommand{\var}[2][]{\operatorname{Var}\auxdelimbracket[#1]{#2}}
+\newcommand{\cov}[3][]{\operatorname{Cov}\auxdelimbracketcomma[#1]{#2}{#3}}
+
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\dif}{\mathop{}\!\mathrm{d}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\indicator}[1]{\mathbf{1}_{#1}}
+
+% Lattice operations
+\newcommand{\meet}{\land}
+\newcommand{\join}{\lor}
+
+\DeclareMathOperator*{\smallbigvee}{\textstyle\bigvee}
+\DeclareMathOperator*{\bigjoin}{\mathchoice
+    {\smallbigvee}%
+    {\bigvee}%
+    {\bigvee}%
+    {\bigvee}%
+}
+\DeclareMathOperator*{\smallbigwedge}{\textstyle\bigwedge}
+\DeclareMathOperator*{\bigmeet}{\mathchoice
+    {\smallbigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+}
+
+
+
+\newcommand*\union\cup
+\newcommand*\intersect\cap
+
+\DeclareMathOperator*{\smallbigcup}{\textstyle\bigcup}
+\DeclareMathOperator*{\bigunion}{\mathchoice
+    {\smallbigcup}%
+    {\bigcup}%
+    {\bigcup}%
+    {\bigcup}%
+}
+\DeclareMathOperator*{\smallbigcap}{\textstyle\bigcap}
+\DeclareMathOperator*{\bigintersect}{\mathchoice
+    {\smallbigcap}%
+    {\bigcap}%
+    {\bigcap}%
+    {\bigcap}%
+}
+
+
+\DeclarePairedDelimiterX{\set}[2]{\lbrace}{\rbrace}{#1\;\delimsize\vert\;#2}
+
+\newcommand{\defeq}{\coloneqq}
+\newcommand{\eqdef}{\eqqcolon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+\DeclareMathOperator{\e}{\mathrm{e}}
+
+\newcommand{\ball}[3][]{%
+    \ifstrempty{#1}%
+        {%
+            b\auxdelimparencomma{#2}{#3}%
+        }{%
+            b_{#1}\auxdelimparencomma{#2}{#3}%
+        }%
+}
+
+\newcommand{\converges}[1]{\xrightarrow[#1]{}}
+\DeclareMathOperator{\supp}{supp}
+\let\oldvec\vec
+\renewcommand{\vec}[1]{\underline{#1}}
+\newcommand{\Tr}[1][]{%
+    \ifstrempty{#1}%
+        {%
+            \operatorname{Tr}%
+        }{%
+            \operatorname{Tr}_{#1}%
+        }%
+}
+
+
+\usepackage{listofitems}
+\setsepchar{,}
+
+\makeatletter
+\newcommand{\mat@dims}[1]{%
+    \readlist*\@dims{#1}%
+    \ifnum \@dimslen=1
+        \def\@dimsout{\@dims[1]}%
+    \else
+        \def\@dimsout{\@dims[1], \@dims[2]}%
+    \fi
+    \@dimsout
+}
+
+
+\newcommand{\matgroup}[3]{\mathrm{#1}_{#2}(#3)}
+\newcommand{\matGL}[2]{\matgroup{GL}{#1}{#2}}
+\newcommand{\trans}{^{\top}}
+\newcommand{\mat}[2]{M_{\mat@dims{#1}}(#2)}
+
+\makeatother
+
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\clSpan}{\overbar{0.5}{1.5}{span}}
+
+\newcommand\inv{^{\langle-1\rangle}}
+\newcommand{\preim}[2][]{^{-1}\auxdelimparen[#1]{#2}}
+
+\newcommand{\dsupp}[2][]{\mathrm{Sp}_d\auxdelimparen[#1]{#2}}
+
+\usepackage[amsmath,thmmarks,hyperref]{ntheorem}
+\usepackage{bbding}
+
+\newcommand{\theorembullet}{{\footnotesize\textbullet}}
+\newcommand{\pencilsymbol}{\raisebox{-2pt}{\normalfont\PencilLeft}}
+\makeatletter
+\newtheoremstyle{changedotcustomnumber}%
+    {}%
+    {\item[\hskip\labelsep \theorem@headerfont ##3~~\theorembullet~~##1\theorem@separator]}
+\newtheoremstyle{changedotbreakcustomnumber}%
+    {}%
+    {\item[\rlap{\vbox{\hbox{\hskip\labelsep \theorem@headerfont
+            ##3~~\theorembullet~~##1\theorem@separator}\hbox{\strut}}}]}
+\makeatother
+
+\theorembodyfont{\normalfont}
+\theoremseparator{~~}
+\theoremsymbol{\ensuremath{\blacksquare}}
+\theoremstyle{changedotcustomnumber}
+\newtheorem{opgave}{\pencilsymbol}
+\theoremstyle{changedotbreakcustomnumber}
+\newtheorem{opgavebreak}{\pencilsymbol}
+
+\newlist{solutionsec}{enumerate}{1}
+\setlist[solutionsec]{leftmargin=0pt, parsep=0pt, listparindent=\parindent, label=(\alph*), labelsep=0pt, labelwidth=20pt, itemindent=20pt, align=left, itemsep=.5\baselineskip}
+
+
+\begin{document}
+
+\maketitle
+
+
+\begin{opgavebreak}[2.1]
+\begin{solutionsec}
+    \item Vis betingelserne for fastholdt $B$ (vi har endda $\calU_\calJ = \bigintersect_{B \in \calJ} \calU_{\{B\}}$). For $A \in \calU_\calJ$ har vi
+    %
+    \begin{equation*}
+        \mu((A_1 \setminus A_2) \intersect B)
+            = \mu((A_1 \intersect B) \setminus A_2)
+            = \mu(A_1 \intersect B) - \mu(A_2 \intersect B)
+            = \mu(A_1 \setminus A_2) \mu(B).
+    \end{equation*}
+    %
+    Den sidste betingelse følger ved kontinuitet af $\mu$.
+
+    \item Betragt $A_1 \intersect A_2$.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgave}[2.2]
+    Pointen er at der ikke er nok målelige mængder i $\calE$ til at skelne mellem $\mu$ og $\mu'$, hvilket der f.eks. er i Borelalgebraen på $\reals$.
+\end{opgave}
+
+
+\begin{opgave}[2.4]
+    Sæt $\nu(B) = \mu(-B)$. Da stemmer $\nu$ og $\mu$ overens på mængderne $(-\infty,x]$. Benyt da Hovedsætning~2.2.2.
+\end{opgave}
+
+
+\begin{opgavebreak}[5.18]
+\begin{solutionsec}
+    \item Lad $n \in \naturals$ afparere $\epsilon = 1$, og bemærk at $\abs{f_n} - \abs{f} \leq \abs{f_n - f} \leq 1$. Vis da at $\int \abs{f} \dif\mu \leq \int \abs{f_n} \dif\mu + \mu(X)$.
+
+    For den anden påstand, bemærk at $\abs{f} + 1$ er en integrabel majorant for en hale af følgen $(f_n)$, og anvend domineret konvergens. Alternativt bemærk at
+    %
+    \begin{equation*}
+        \abs[\bigg]{ \int_X f_n \dif\mu - \int_X f \dif\mu }
+            \leq \int_X \abs{ f_n - f } \dif\mu
+            \leq \mu(X) \sup_{x \in X} \abs{f_n(x) - f(x)},
+    \end{equation*}
+    %
+    og at højresiden går mod $0$.
+
+    \item Betragt målrummet $(\reals,\borel{\reals},\mu)$. Hvis f.eks. $f_n = \sum_{j=1}^n (1/j) \indicator{(j-1,j]}$, så er alle $f_n$ integrable men ikke $f$. Hvis i stedet $f_n = (1/n) \indicator{[-n^2,n^2]}$, så er alle $f_n$ og $f = 0$ integrable, men $\int_\reals f_n \dif\lambda \to \infty$.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[5.26]
+\begin{solutionsec}
+    \item Benyt vinket samt resultatet fra Opgave~2.4.
+
+    \item Bemærk at
+    %
+    \begin{equation*}
+        \int f(x) \indicator{(0,\infty)}(x) \,\mu(\dif x)
+            = \int f(-x) \indicator{(-\infty,0)}(-x) \,\mu(\dif x)
+            = \int f(x) \indicator{(-\infty,0)}(x) \,\mu(\dif x).
+    \end{equation*}
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[6.3]
+\begin{solutionsec}
+    \item Benyt Tonelli og Fubini.
+
+    \item Skriv $f(x) = x \e^{-x}$ og $g(y) = \e^{-y}$.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[6.4]
+\begin{solutionsec}
+    \item For at vise at $S$ er en Borelmængde, gå f.eks. frem som i Opgave~4.7(c) eller Opgave~4.8.
+
+    \item Se Eksempel~6.4.3.
+
+    \item Se Eksempel~6.4.3.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgave}[6.5]
+    Som i Opgave~6.4.
+\end{opgave}
+
+
+\begin{opgavebreak}[6.6]
+\begin{solutionsec}
+    \item Som i Opgave~6.4 og 6.5.
+
+    \item Bemærk at tællemålet på $\reals$ ikke er $\sigma$-endeligt.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgave}[6.7]
+    Som i ovenstående opgaver.
+\end{opgave}
+
+
+\end{document}
