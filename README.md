@@ -152,3 +152,8 @@ Opgaverne fra kapitel 6 omhandler beregning af konkrete integraler, og i hvert f
 ### Andre bemærkninger
 
 Ingen afleveringer før efter ferien.
+
+
+## Efterårsferie (kalenderuge 42)
+
+Ingen undervisning i denne uge. Trods dette er man meget velkommen til at sende mig en mail hvis man har praktiske eller faglige spørgsmål.
