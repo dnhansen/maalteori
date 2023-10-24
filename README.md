@@ -157,3 +157,23 @@ Ingen afleveringer før efter ferien.
 ## Efterårsferie (kalenderuge 42)
 
 Ingen undervisning i denne uge. Trods dette er man meget velkommen til at sende mig en mail hvis man har praktiske eller faglige spørgsmål.
+
+
+## Uge 8 (kalenderuge 43)
+
+### Opgaver
+
+- 5.22: Vigtig. Måske god forberedelse til Opgave 5.24.
+- 5.23: Mindre vigtig. Så vidt jeg kan se, skal man i del (a) bruge substitution. Altså må man omskrive til et Riemannintegral. Vi skal senere (i kapitel 11) se at man også kan udføre substitution i Lebesgueintegraler.
+- 5.24: Meget vigtig. Læs evt. blot opgavebeskrivelsen samt del (d), og løs den senere. Del (e) er en smule tricky, så løs evt. først Opgave 5.25. Bemærk at der er en fejl øverst på s. 135, idet $f(t,x)$ her skulle være $f(x,t)$.
+- 5.25: Vigtig. Lettere end 5.24(e).
+- 6.9: Vigtig.
+- 6.10: Mindre vigtig.
+- 7.2: Meget vigtig (men måske velkendt fra Konveks optimering?).
+
+[Løsningsforslag](uge08.pdf) (uploades efter TØ)
+
+
+### Andre bemærkninger
+
+Ingen aflevering i denne uge.
