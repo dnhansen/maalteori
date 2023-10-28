@@ -1,0 +1,321 @@
+\newcommand{\doctitle}{Uge 8}
+\newcommand{\docauthor}{Danny Nygård Hansen}
+
+\documentclass[a4paper, 11pt, article, danish, oneside]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage[autostyle, danish=guillemets]{csquotes}
+
+\usepackage[final]{microtype}
+\frenchspacing
+\raggedbottom
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[largesmallcaps]{kpfonts}
+\linespread{1.06}
+\DeclareMathAlphabet\mathfrak{U}{euf}{m}{n}
+\SetMathAlphabet\mathfrak{bold}{U}{euf}{b}{n}
+\usepackage{inconsolata}
+
+\usepackage{hyperref}
+\hypersetup{%
+	pdftitle=\doctitle,
+	pdfauthor={\docauthor},
+    hidelinks,
+}
+
+\usepackage{enumitem}
+\setenumerate[0]{label=\normalfont(\arabic*)}
+\setlist{
+	listparindent=\parindent,
+	parsep=0pt,
+}
+\usepackage{array}
+
+\title{\doctitle}
+\author{\docauthor}
+
+\newcommand{\overbar}[3]{\mkern #1mu\overline{\mkern-#1mu#3\mkern-#2mu}\mkern #2mu}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\extreals}{\overbar{1.5}{1.5}{\reals}}
+\newcommand{\complex}{\mathbb{C}}
+
+
+\usepackage{pgffor}
+
+\newcommand{\rvar}[1]{\mathsf{#1}}
+
+\foreach \x in {A,...,Z}{%
+    \expandafter\xdef\csname cal\x\endcsname{\noexpand\mathcal{\x}}
+    \expandafter\xdef\csname frak\x\endcsname{\noexpand\mathfrak{\x}}
+    \expandafter\xdef\csname rand\x\endcsname{\noexpand\rvar{\x}}
+}
+
+
+\usepackage{etoolbox}
+\newcommand{\blank}{\mathrel{\;\cdot\;}}
+\newcommand{\blankifempty}[1]{\ifstrempty{#1}{\blank}{#1}}
+\DeclarePairedDelimiter{\auxdelimlvert}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\auxdelimlVert}{\lVert}{\rVert}
+\DeclarePairedDelimiterX{\auxdelimanglescomma}[2]{\langle}{\rangle}{#1,#2}
+\newcommand{\abs}[2][]{\auxdelimlvert[#1]{\blankifempty{#2}}}
+\newcommand{\norm}[1]{\auxdelimlVert{\blankifempty{#1}}}
+\newcommand{\inner}[2]{\auxdelimanglescomma{\blankifempty{#1}}{\blankifempty{#2}}}
+
+
+\DeclarePairedDelimiter{\auxdelimparen}{(}{)}
+\DeclarePairedDelimiterX{\auxdelimparencomma}[2]{(}{)}{#1,#2}
+\DeclarePairedDelimiter{\auxdelimbracket}{[}{]}
+\DeclarePairedDelimiterX{\auxdelimbracketcomma}[2]{[}{]}{#1,#2}
+\newcommand{\powerset}[2][]{\calP\auxdelimparen[#1]{#2}}
+\newcommand{\borel}[2][]{\calB\auxdelimparen[#1]{#2}}
+\newcommand{\meas}[2][]{\calM\auxdelimparen[#1]{#2}}
+\newcommand{\measC}[2][]{\calM_\complex\auxdelimparen[#1]{#2}}
+\newcommand{\measpos}[2][]{\meas[#1]{#2}^+}
+\newcommand{\measbound}[2][]{\calM_b\auxdelimparen[#1]{#2}}
+\newcommand{\measboundpos}[2][]{\measbound[#1]{#2}^+}
+
+
+\newcommand{\extmeas}[2][]{\overbar{4.5}{0.5}{\calM}\auxdelimparen[#1]{#2}}
+\newcommand{\extmeaspos}[2][]{\extmeas[#1]{#2}^+}
+\newcommand{\simplemeas}[2][]{\calS\!\calM\auxdelimparen[#1]{#2}}
+\newcommand{\simplemeaspos}[2][]{\simplemeas[#1]{#2}^+}
+\newcommand{\sigmaalg}[2][]{\sigma\auxdelimparen[#1]{#2}}
+\newcommand{\deltasys}[2][]{\delta\auxdelimparen[#1]{#2}}
+
+\newcommand{\expval}[2][]{\mathbb{E}\auxdelimbracket[#1]{#2}}
+\newcommand{\var}[2][]{\operatorname{Var}\auxdelimbracket[#1]{#2}}
+\newcommand{\cov}[3][]{\operatorname{Cov}\auxdelimbracketcomma[#1]{#2}{#3}}
+
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\dif}{\mathop{}\!\mathrm{d}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\indicator}[1]{\mathbf{1}_{#1}}
+
+% Lattice operations
+\newcommand{\meet}{\land}
+\newcommand{\join}{\lor}
+
+\DeclareMathOperator*{\smallbigvee}{\textstyle\bigvee}
+\DeclareMathOperator*{\bigjoin}{\mathchoice
+    {\smallbigvee}%
+    {\bigvee}%
+    {\bigvee}%
+    {\bigvee}%
+}
+\DeclareMathOperator*{\smallbigwedge}{\textstyle\bigwedge}
+\DeclareMathOperator*{\bigmeet}{\mathchoice
+    {\smallbigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+}
+
+
+
+\newcommand*\union\cup
+\newcommand*\intersect\cap
+
+\DeclareMathOperator*{\smallbigcup}{\textstyle\bigcup}
+\DeclareMathOperator*{\bigunion}{\mathchoice
+    {\smallbigcup}%
+    {\bigcup}%
+    {\bigcup}%
+    {\bigcup}%
+}
+\DeclareMathOperator*{\smallbigcap}{\textstyle\bigcap}
+\DeclareMathOperator*{\bigintersect}{\mathchoice
+    {\smallbigcap}%
+    {\bigcap}%
+    {\bigcap}%
+    {\bigcap}%
+}
+
+
+\DeclarePairedDelimiterX{\set}[2]{\lbrace}{\rbrace}{#1\;\delimsize\vert\;#2}
+
+\newcommand{\defeq}{\coloneqq}
+\newcommand{\eqdef}{\eqqcolon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+\DeclareMathOperator{\e}{\mathrm{e}}
+
+\newcommand{\ball}[3][]{%
+    \ifstrempty{#1}%
+        {%
+            b\auxdelimparencomma{#2}{#3}%
+        }{%
+            b_{#1}\auxdelimparencomma{#2}{#3}%
+        }%
+}
+
+\newcommand{\converges}[1]{\xrightarrow[#1]{}}
+\DeclareMathOperator{\supp}{supp}
+\let\oldvec\vec
+\renewcommand{\vec}[1]{\underline{#1}}
+\newcommand{\Tr}[1][]{%
+    \ifstrempty{#1}%
+        {%
+            \operatorname{Tr}%
+        }{%
+            \operatorname{Tr}_{#1}%
+        }%
+}
+
+
+\usepackage{listofitems}
+\setsepchar{,}
+
+\makeatletter
+\newcommand{\mat@dims}[1]{%
+    \readlist*\@dims{#1}%
+    \ifnum \@dimslen=1
+        \def\@dimsout{\@dims[1]}%
+    \else
+        \def\@dimsout{\@dims[1], \@dims[2]}%
+    \fi
+    \@dimsout
+}
+
+
+\newcommand{\matgroup}[3]{\mathrm{#1}_{#2}(#3)}
+\newcommand{\matGL}[2]{\matgroup{GL}{#1}{#2}}
+\newcommand{\trans}{^{\top}}
+\newcommand{\mat}[2]{M_{\mat@dims{#1}}(#2)}
+
+\makeatother
+
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\clSpan}{\overbar{0.5}{1.5}{span}}
+
+\newcommand\inv{^{\langle-1\rangle}}
+\newcommand{\preim}[2][]{^{-1}\auxdelimparen[#1]{#2}}
+
+\newcommand{\dsupp}[2][]{\mathrm{Sp}_d\auxdelimparen[#1]{#2}}
+
+\usepackage[amsmath,thmmarks,hyperref]{ntheorem}
+\usepackage{bbding}
+
+\newcommand{\theorembullet}{{\footnotesize\textbullet}}
+\newcommand{\pencilsymbol}{\raisebox{-2pt}{\normalfont\PencilLeft}}
+\makeatletter
+\newtheoremstyle{changedotcustomnumber}%
+    {}%
+    {\item[\hskip\labelsep \theorem@headerfont ##3~~\theorembullet~~##1\theorem@separator]}
+\newtheoremstyle{changedotbreakcustomnumber}%
+    {}%
+    {\item[\rlap{\vbox{\hbox{\hskip\labelsep \theorem@headerfont
+            ##3~~\theorembullet~~##1\theorem@separator}\hbox{\strut}}}]}
+\makeatother
+
+\theorembodyfont{\normalfont}
+\theoremseparator{~~}
+\theoremsymbol{\ensuremath{\blacksquare}}
+\theoremstyle{changedotcustomnumber}
+\newtheorem{opgave}{\pencilsymbol}
+\theoremstyle{changedotbreakcustomnumber}
+\newtheorem{opgavebreak}{\pencilsymbol}
+
+\newlist{solutionsec}{enumerate}{1}
+\setlist[solutionsec]{leftmargin=0pt, parsep=0pt, listparindent=\parindent, label=(\alph*), labelsep=0pt, labelwidth=20pt, itemindent=20pt, align=left, itemsep=.5\baselineskip}
+
+
+\begin{document}
+
+\maketitle
+
+
+\begin{opgave}[5.22]
+    Husk at det er tilstrækkeligt at vise at $F(t_n) \to F(t_0)$ for enhver følge $(t_n)_{n \in \naturals}$ i $I$ der konvergerer mod $t_0$. Benyt da domineret konvergens.
+\end{opgave}
+
+
+\begin{opgavebreak}[5.23]
+\begin{solutionsec}
+    \item Vi benytter her at f.eks.
+    %
+    \begin{equation*}
+        \int_a^b f(x+c) \,\lambda(\dif x)
+            = \int_{a+c}^{b+c} f(x) \,\lambda(\dif x),
+    \end{equation*}
+    %
+    hvilket er velkendt for Riemannintegralet og kan vises for Lebesgueintegralet ved den sædvanlige korrespondence derimellem. Dette følger også fra resultater i §11.2. Vis da at
+    %
+    \begin{equation*}
+        \frac{1}{n} \int_a^b \Delta_n f(x) \,\lambda(\dif x)
+            = \int_b^{b+1/n} f(x) \,\lambda(\dif x) - \int_a^{a+1/n} f(x) \,\lambda(\dif x),
+    \end{equation*}
+    %
+    og derefter at f.eks.
+    %
+    \begin{equation*}
+        \abs[\bigg]{ n \int_b^{b+1/n} f(x) \,\lambda(\dif x) - f(b) }
+            \leq \epsilon
+    \end{equation*}
+    %
+    for $n$ stor nok (benyt her kontinuiteten af $f$ i $b$).
+
+    \item Bemærk at $\Delta_n f \to f'$ punktvist, så $f'$ er målelig. Lad $\abs{f'}$ være begrænset af $R > 0$ på $[a,b+1]$. Ved middelværdisætningen findes for $x \in [a,b]$ et $s \in (x,x+1/n) \subseteq [a,b+1]$ så $\Delta_n f(x) = f'(s)$, så $\abs{\Delta_n f}$ er begrænset af $R$ på $[a,b]$ for alle $n$. Altså er $R\indicator{[a,b]}$ en integrabel majorant. Det ønskede følger da af domineret konvergens.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[5.24]
+\begin{solutionsec}
+    \item Indsæt definitionen på $F$.
+    
+    \item Benyt middelværdisætningen på funktionen $t \mapsto f(x,t)$.
+
+    \item Benyt at funktionen $g$ er integrabel, og anvend derefter domineret konvergens (bemærk at $\xi_{n,x} \to t$ for $n \to \infty$).
+
+    \item Dette følger af (c) da følgen $(t_n)$ var arbitrært valgt.
+
+    \item Bemærk at $F$ er veldefineret da $\cos$ er begrænset, så integranden er faktisk integrabel. Der findes ikke umiddelbart en funktion $g$ som dominerer den afledte af integranden for alle $t$, men betragt da $F$ restringeret til et interval $(-R,R)$ og vis at den er differentiabel herpå. Da $R$ er vilkårlig, er $F$ differentiabel overalt.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[5.25]
+\begin{solutionsec}
+    \item Bemærk at at $\cos$ er begrænset og at $\mu$ er endeligt, så kontinuitet følger af domineret konvergens.
+    
+    \item Overvej først at også $\int_\reals x \,\mu(\dif x) < \infty$ da $\abs{x} \leq x^2 + 1$, og $\mu$ er endeligt. Benyt da Opgave~5.24. (Bemærk at eftersom $t$ kun optræder som argument til enten $\sin$ eller $\cos$, behøver vi ikke benytte samme trick som i Opgave~5.24(e).)
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[6.9]
+\begin{solutionsec}
+    \item Bemærk at $\tau_1$ er $\sigma$-endeligt, så $\tau_1 \otimes \tau_1$ giver mening. Tjek da at $\tau_2(A \times B) = \tau_1(A) \tau_1(B)$ og benyt entydighedsdelen af Hovedsætning~6.3.3.
+
+    \item Husk Eksempel~5.2.13. Hvis alle $a_{m,n}$ er ikke-negative, da giver Tonelli at summationsrækkefølgen kan ombyttes. Fubini giver det samme såfremt rækken er absolut konvergent.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgave}[6.10]
+    Løsningsforslag udeladt.
+\end{opgave}
+
+
+\begin{opgavebreak}[7.2]
+\begin{solutionsec}
+    \item Opskriv hvad det vil sige at $f$ er konveks, benyt at $\phi$ er voksende, og til sidst at $\phi$ er konveks. (Resultatet gælder ikke generelt hvis $\phi$ ikke er voksende. Lad f.eks. $f(x) = x^2$ og $\phi(t) = -t$.)
+
+    \item Benyt at $a = \ell a + (1-\ell)a$ samt trekantsuligheden.
+
+    \item Beregn $\phi''$ og se at denne er positiv, og benyt derefter Korollar~7.1.3.
+
+    \item Dette følger direkte af ovenstående.
+\end{solutionsec}
+\end{opgavebreak}
+
+\end{document}
