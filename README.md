@@ -191,7 +191,7 @@ I prioriteret rækkefølge:
 - 7.4: Se ugesedlen (og løsningsforslagene nedenfor) for en geometrisk fortolkning af størrelsen $\int_0^1 \sqrt{1+(f')^2} \,\mathrm{d}\lambda$.
 - 7.11: Rummene $\mathcal{L}^p(\mu)$ for $p \in (0,1)$ opfører sig ret grimt (man kan f.eks. vise at der ikke findes nogen ikke-trivielle kontinuerte lineære funktionaler (jf. §9.5) derpå; synderen er at disse rum ikke er såkaldt *lokalkonvekse*, et begreb som bl.a. studeres i *Videregående analyse*), så vi er sjældent interesserede i dem. Trods dette er det godt at kende deres elementære egenskaber.
 
-[Løsningsforslag](uge09.pdf) (uploades efter TØ)
+[Løsningsforslag](uge09.pdf)
 
 
 ### Andre bemærkninger
