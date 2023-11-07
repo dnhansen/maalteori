@@ -197,3 +197,24 @@ I prioriteret rækkefølge:
 ### Andre bemærkninger
 
 Aflevering 5 afleveres søndag d. 5. november kl. 23:59.
+
+
+## Uge 10 (kalenderuge 45)
+
+### Opgaver
+
+I prioriteret rækkefølge:
+
+- 7.10: Denne opgave er meget vigtig for forståelsen af forholdet mellem forskellige $\mathcal{L}^p$-rum. Sammenlign Sætning 7.3.2(ii) og Opgave 7.6(b).
+- 7.16: Vink: Fatous lemma.
+- 8.1: Denne opgave bekræfter blot at tingene fungerer på $\mathbb{C}$ som de gør på $\mathbb{R}$.
+- 8.2
+- 7.17: Resultatet i del (a) er kendt som "den omvendte trekantsulighed" og bør være velkendt fra *Matematisk analyse 1* i det tilfælde hvor normen er absolutværdien på $\mathbb{R}$.
+- 7.9
+
+[Løsningsforslag](uge10.pdf)
+
+
+### Andre bemærkninger
+
+Aflevering 6 afleveres søndag d. 12. november kl. 23:59.
