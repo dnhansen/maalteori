@@ -218,3 +218,25 @@ I prioriteret rækkefølge:
 ### Andre bemærkninger
 
 Aflevering 6 afleveres søndag d. 12. november kl. 23:59.
+
+
+## Uge 11 (kalenderuge 46)
+
+### Opgaver
+
+I prioriteret rækkefølge:
+
+- 9.2: Denne opgave viser specielt at $\lVert \varphi_u \rVert = \lVert u \rVert$, hvor $\varphi_u$ er funktionalet fra Eksempel 9.5.2. For at vise at et tal, her $\lVert u \rVert$, er lige med supremum af en givet mængde af reelle tal, er der forskellige fremgangsmåder. I denne opgave kan man f.eks. overveje følgende: Man kan udnytte at supremum er den *mindste* øvre grænse for mængden, og den ene ulighed følger hvis man kan vise at $\lVert u \rVert$ også er en øvre grænse for mængden. Den omvendte ulighed kan opnås ved at vise at tallet $\lVert u \rVert$ også ligger i mængden. *Vink*: Vælg $v$ på en smart måde.
+- 9.3
+- 9.6: *Vink*: Den ene inklusion gælder altid. For den anden inklusion, benyt Korollar 9.3.5.
+- 9.5
+- 9.8: Denne opgave er en smule tricky. For at få absolutværdien "inden for" sumtegnet, så at sige, betragt vektoren som fremkommer ved at tage absolutværdien af $x$'s koordinator mht. den givne ortonormalbasis (og tilsvarende for $y$). Bemærk i (b) at der strengt taget ikke er tale om en generalisering af Parsevals ligning, da denne gælder for vilkårlige Hilbertrum, mens opgaven kun omhandler *separable* Hilbertrum.
+- 8.3: Jeg så hellere at I fik godt styr på Opgave 5.24.
+
+
+[Løsningsforslag](uge11.pdf)
+
+
+### Andre bemærkninger
+
+Aflevering 6 afleveres søndag d. 19. november kl. 23:59.
