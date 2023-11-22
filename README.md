@@ -239,4 +239,4 @@ I prioriteret rækkefølge:
 
 ### Andre bemærkninger
 
-Aflevering 6 afleveres søndag d. 19. november kl. 23:59.
+Aflevering 7 afleveres søndag d. 19. november kl. 23:59.
