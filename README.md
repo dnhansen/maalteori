@@ -255,7 +255,7 @@ I prioriteret rækkefølge:
 - 10.3
 
 
-[Løsningsforslag](uge12.pdf) (uploades efter TØ)
+[Løsningsforslag](uge12.pdf)
 
 
 ### Andre bemærkninger
