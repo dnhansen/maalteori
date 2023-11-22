@@ -240,3 +240,24 @@ I prioriteret rækkefølge:
 ### Andre bemærkninger
 
 Aflevering 7 afleveres søndag d. 19. november kl. 23:59.
+
+
+## Uge 12 (kalenderuge 47)
+
+### Opgaver
+
+I prioriteret rækkefølge:
+
+- 9.13(a-c)
+- 9.15
+- US1
+- 10.1
+- 10.3
+
+
+[Løsningsforslag](uge12.pdf) (uploades efter TØ)
+
+
+### Andre bemærkninger
+
+Aflevering 8 afleveres søndag d. 26. november kl. 23:59.
