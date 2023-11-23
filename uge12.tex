@@ -273,6 +273,32 @@
 			= \frac{\norm{x}}{\delta} \norm[\bigg]{T \biggl( \delta \frac{x}{\norm{x}} \biggr) }
 			\leq \delta\inv \norm{x}.
 	\end{equation*}
+    %
+    For et mere geometrisk argument, lad først
+    %
+    \begin{equation*}
+        \overline{b}(x,r)
+            = \set[\big]{y \in V}{\norm{x-y} \leq r}
+    \end{equation*}
+    %
+    betegne den \emph{lukkede} kugle med centrum i $x \in V$ og radius $r > 0$. Bemærk så at kontinuitet af $T$ i $0$ betyder at
+    %
+    \begin{equation*}
+        T\bigl( \overline{b}(0,\delta) \bigr)
+            \subseteq \overline{b}(0,1).
+    \end{equation*}
+    %
+    Dette medfører at
+    %
+    \begin{equation*}
+        T\bigl( \overline{b}(0,1) \bigr)
+            = T\bigl( \tfrac{1}{\delta} \overline{b}(0,\delta) \bigr)
+            = \tfrac{1}{\delta} T\bigl( \overline{b}(0,\delta) \bigr)
+            \subseteq \tfrac{1}{\delta} \overline{b}(0,1)
+            = \overline{b}(0,\tfrac{1}{\delta}),
+    \end{equation*}
+    %
+    hvilket netop siger at $\norm{T(x)} \leq \tfrac{1}{\delta}$ når $\norm{x} \leq 1$.
 
     \item For trekantsuligheden, bemærk at
     %
