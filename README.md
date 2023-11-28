@@ -261,3 +261,25 @@ I prioriteret rækkefølge:
 ### Andre bemærkninger
 
 Aflevering 8 afleveres søndag d. 26. november kl. 23:59.
+
+
+## Uge 13 (kalenderuge 48)
+
+### Opgaver
+
+I prioriteret rækkefølge:
+
+- 11.4: Det såkaldte *Gaussiske integral* beregnes ved hjælp af polære koordinater. Vi viser derudover at tætheden for normalfordelingen faktisk gør normalfordelingen til et sandsynlighedsmål. Del (e) er mindre vigtigt.
+- 11.5: Resultatet i del (d) resultat benyttes f.eks. i Eksempel 12.1.5 til beregning af den Fouriertransformerede af tætheden for normalfordelingen.
+- 12.2
+- 12.3
+- 12.4: Denne opgave viser specielt at den Fouriertransformerede af tætheden for Laplacefordelingen er tætheden for Cauchyfordelingen, og omvendt.
+- Opgave A
+
+
+[Løsningsforslag](uge13.pdf) (uploades efter TØ)
+
+
+### Andre bemærkninger
+
+Ikke flere afleveringer! Alle besvarelser skal være afleveret og godkendt inden jul. Nærmere dato følger.
