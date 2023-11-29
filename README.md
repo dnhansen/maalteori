@@ -277,9 +277,9 @@ I prioriteret rækkefølge:
 - Opgave A
 
 
-[Løsningsforslag](uge13.pdf) (uploades efter TØ)
+[Løsningsforslag](uge13.pdf)
 
 
 ### Andre bemærkninger
 
-Ikke flere afleveringer! Alle besvarelser skal være afleveret og godkendt inden jul. Nærmere dato følger.
+Ikke flere afleveringer! Alle besvarelser skal være afleveret og godkendt inden jul. Jeg skal have givet jer feedback d. 15. december, så genaflever gerne i god tid så I har tid til flere eventuelle forsøg.
