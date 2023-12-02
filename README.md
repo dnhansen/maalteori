@@ -283,3 +283,47 @@ I prioriteret rækkefølge:
 ### Andre bemærkninger
 
 Ikke flere afleveringer! Alle besvarelser skal være afleveret og godkendt inden jul. Jeg skal have givet jer feedback d. 15. december, så genaflever gerne i god tid så I har tid til flere eventuelle forsøg.
+
+
+## Uge 14 (kalenderuge 49)
+
+### Opgaver
+
+TODO
+
+[Løsningsforslag](uge14.pdf) (uploades efter TØ)
+
+
+### Andre bemærkninger
+
+TODO
+
+
+## Eksamen
+
+### Generelle råd
+
+TODO
+
+
+### Spørgsmål
+
+1. **Dynkins lemma.** Her skal Dynkins lemma selvfølgelig bevises, naturligt indledt af en definition på $\delta$-systemer. Jeg synes personligt ikke at Steens præsentation af den underliggende logik i Dynkins lemma er super klar; se f.eks. [disse noter](https://github.com/dnhansen/math-analysis/blob/main/math-analysis.pdf) for en anden præsentation. Den centrale anvendelse af Dynkins lemma (Sætning 2.2.1 og Hovedsætning 2.2.2) bør også nævnes. Vi bemærker her at det springende punkt i beviset for Sætning 2.2.1 er, at to endelige mål $\mu$ og $\nu$ på $(X,\mathcal{E})$ stemmer overens på et $\delta$-system såfremt $\mu(X) = \nu(X)$ (kort sagt: sandsynlighedsmål stemmer overens på $\delta$-systemer). Der er formentlig ikke tid til at bevise både Dynkins lemma og ovennævnte sætninger.
+
+2. **Lebesgues sætning om monoton konvergens.** Beviset er ret langt (i hvert fald i Steens præsentation), så der er nok ikke tid til meget andet. Man kan også nævne generaliseringen Sætning 5.5.1, samt nævne de centrale anvendelser af sætningen: Eksempelvis homogenitet af Lebesgueintegralet, Fatous lemma og i forlængelse domineret konvergens (uden at komme nærmere ind på beviserne, for det er jo spørgsmål 3), eller beregning af konkrete integraler gennem omskrivning til Riemannintegraler.
+
+3. **Fatous lemma og Lebesgues sætning om domineret konvergens.** Igen er det oplagt hvad der skal vises. Her er det selvfølgelig i orden at tage sætningen om monoton konvergens for givet. Her kan vi også nævne vigtige anvendelser: F.eks. differentiation under integraltegnet, (som i spørgsmål 2) beregning af konkrete integraler, en række anvendelser i teorien om Fouriertransformationen, osv.
+
+4. **Eksistens og entydighed af produktmål.** Her er de centrale resultater Lemma 6.3.1, Lemma 6.3.2 og Hovedsætning 6.3.3, altså (6.3.1) måleligheden af funktionerne $x \mapsto \nu(U_x)$ og $y \mapsto \mu(U^y)$ for endelige mål $\mu$ og $\nu$, (6.3.2) udvidelsen til $\sigma$-endelig mål, og (6.3.3) eksistens og entydighed af produktmål. Afhængigt af hvor hurtig man er, kan man nå igennem mere eller mindre af dette, men formentligt ikke det hele. Hovedsætning 6.3.3 er selv sagt det vigtigste resultat, og man kan overveje f.eks. at springe Lemma 6.3.2 over og blot nævne at denne udvidelse er mulig vha. det sædvanlige argument (en udgave af hvilket vi også benytter i f.eks. beviserne for Hovedsætning 2.2.2 og Sætning 10.2.1(ii)).
+
+5. **Integraluligheder og rummene $\mathcal{L}^p(\mu)$ og $L^p(\mu)$.** De mest relevante afsnit er her 7.2 og 7.3. Her er der mange muligheder: Hvad angår uligheder, er Young, Hölder og Minkowskis uligheder alle vigtige, men mest central er nok Minkowskis ulighed, da denne viser at $\mathcal{L}^p(\mu)$ kommer udstyret med en seminorm. Dette leder naturligt videre til $L^p(\mu)$, hvorpå denne seminorm giver anledning til en ægte norm.
+
+6. **Konvergens i $\mu$-$p$-middel.** Det centrale resultat er selvfølgelig Fischers fuldstændighedssætning (Hovedsætning 7.4.7), men meget af det tekniske arbejde udføres i Lemma 7.4.6. Den interessante implikation i Hovedsætning 7.4.7 er naturligvis (i) $\Rightarrow$ (ii), så man kan evt. nøjes med at vise denne samt (dele af) Lemma 7.4.6. Man bør selvfølgelig også definere det relevante konvergensbegreb og tilhørende Cauchyfølger. Derudover kan man nævne at $\mathcal{L}^p(\mu)$ også er fuldstændigt for $p \in (0,1)$, men at man i dette tilfælde ikke har adgang til en norm, og derfor bliver beviset en smule anderledes (jf. Bemærkning 7.4.9). (Vi bemærker at man i kurset *Videregående sandsynlighedsteori* giver endnu et bevis for fuldstændigheden af $\mathcal{L}^p(\mu)$ gennem studiet af såkaldt *konvergens i mål*, og her gives endda ét bevis for alle $p \in (0,\infty)$.)
+
+7. **Hilbertrum og projektionssætningen.** TODO
+
+8. **Fouriertransformationen og inversionssætningen.** TODO
+
+9. **Plancherels sætning.** TODO
+
+10. **Uafhængige stokastiske variable og store tals lov**. TODO
