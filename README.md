@@ -11,7 +11,7 @@ For kontaktinformationer se Brightspace.
 
 ### Opgaver
 
-[Løsningsforslag](uge01.pdf)
+[Løsningsforslag](Noter/uge01.pdf)
 
 ### Faglige kommentarer
 
@@ -34,7 +34,7 @@ Ingen aflevering i denne uge.
 - 1.9: Hvis begreberne lim sup og lim inf for følger af reelle tal volder problemer, så er det vigtigere at få styr på disse begreber. Dette er nok højeste prioritet når I har lavet 1.3 og måske 1.4. Se appendiks A.5, men vi skal også nok snakke om det til TØ. Brug derudover også tiden på at genopfriske begreber fra første år, herunder: konvergens af følger og rækker, åbne og lukkede mængder, følgelukkethed, kontinuitet og følgekontinuitet.
 - 1.11: Vigtig.
 
-[Løsningsforslag](uge02.pdf)
+[Løsningsforslag](Noter/uge02.pdf)
 
 
 ### Andre bemærkninger
@@ -54,7 +54,7 @@ Første aflevering afleveres søndag d. 10. september kl. 23:59.
 - 1.16: Mindre vigtig. Dette resultat vises også senere i bogen (jf. Sætning 7.2.6).
 - 1.19: Vigtig (på trods af at denne åbenbart er en "ekstraopgave").
 
-[Løsningsforslag](uge03.pdf)
+[Løsningsforslag](Noter/uge03.pdf)
 
 
 ### Andre bemærkninger
@@ -77,7 +77,7 @@ Bemærk at vigtigheden af opgaverne ikke nødvenligvis afspejler rækkefølgen h
 - 4.6: Meget vigtig.
 - 4.7: Vigtig.
 
-[Løsningsforslag](uge04.pdf)
+[Løsningsforslag](Noter/uge04.pdf)
 
 
 ### Andre bemærkninger
@@ -99,7 +99,7 @@ Ingen aflevering i denne uge.
 - 5.4: Vigtig, men mindre vigtig end 5.3. Vink: Se Eksempel 5.2.13.
 - 5.5: Meget vigtig.
 
-[Løsningsforslag](uge05.pdf)
+[Løsningsforslag](Noter/uge05.pdf)
 
 
 ### Andre bemærkninger
@@ -121,7 +121,7 @@ Opgaverne begynder støt at stige i kompleksitet, men de bliver forhåbentligt o
 - 5.16: Mindre vigtig, men god træning i at beregne konkrete integraler.
 - 5.17: Mindre vigtig, men også god træning i konkrete beregninger.
 
-[Løsningsforslag](uge06.pdf)
+[Løsningsforslag](Noter/uge06.pdf)
 
 
 ### Andre bemærkninger
@@ -146,7 +146,7 @@ Aflevering 4 afleveres søndag d. 8. oktober kl. 23:59.
 
 Opgaverne fra kapitel 6 omhandler beregning af konkrete integraler, og i hvert fald én af dem bør forsøges løst.
 
-[Løsningsforslag](uge07.pdf)
+[Løsningsforslag](Noter/uge07.pdf)
 
 
 ### Andre bemærkninger
@@ -171,7 +171,7 @@ Ingen undervisning i denne uge. Trods dette er man meget velkommen til at sende 
 - 6.10: Mindre vigtig.
 - 7.2: Meget vigtig (men måske velkendt fra Konveks optimering?).
 
-[Løsningsforslag](uge08.pdf)
+[Løsningsforslag](Noter/uge08.pdf)
 
 
 ### Andre bemærkninger
@@ -191,7 +191,7 @@ I prioriteret rækkefølge:
 - 7.4: Se ugesedlen (og løsningsforslagene nedenfor) for en geometrisk fortolkning af størrelsen $\int_0^1 \sqrt{1+(f')^2} \,\mathrm{d}\lambda$.
 - 7.11: Rummene $\mathcal{L}^p(\mu)$ for $p \in (0,1)$ opfører sig ret grimt (man kan f.eks. vise at der ikke findes nogen ikke-trivielle kontinuerte lineære funktionaler (jf. §9.5) derpå; synderen er at disse rum ikke er såkaldt *lokalkonvekse*, et begreb som bl.a. studeres i *Videregående analyse*), så vi er sjældent interesserede i dem. Trods dette er det godt at kende deres elementære egenskaber.
 
-[Løsningsforslag](uge09.pdf)
+[Løsningsforslag](Noter/uge09.pdf)
 
 
 ### Andre bemærkninger
@@ -212,7 +212,7 @@ I prioriteret rækkefølge:
 - 7.17: Resultatet i del (a) er kendt som "den omvendte trekantsulighed" og bør være velkendt fra *Matematisk analyse 1* i det tilfælde hvor normen er absolutværdien på $\mathbb{R}$.
 - 7.9
 
-[Løsningsforslag](uge10.pdf)
+[Løsningsforslag](Noter/uge10.pdf)
 
 
 ### Andre bemærkninger
@@ -234,7 +234,7 @@ I prioriteret rækkefølge:
 - 8.3: Jeg så hellere at I fik godt styr på Opgave 5.24.
 
 
-[Løsningsforslag](uge11.pdf)
+[Løsningsforslag](Noter/uge11.pdf)
 
 
 ### Andre bemærkninger
@@ -255,7 +255,7 @@ I prioriteret rækkefølge:
 - 10.3
 
 
-[Løsningsforslag](uge12.pdf)
+[Løsningsforslag](Noter/uge12.pdf)
 
 
 ### Andre bemærkninger
@@ -277,7 +277,7 @@ I prioriteret rækkefølge:
 - Opgave A
 
 
-[Løsningsforslag](uge13.pdf)
+[Løsningsforslag](Noter/uge13.pdf)
 
 
 ### Andre bemærkninger
@@ -291,7 +291,7 @@ Ikke flere afleveringer! Alle besvarelser skal være afleveret og godkendt inden
 
 TODO
 
-[Løsningsforslag](uge14.pdf) (uploades efter TØ)
+[Løsningsforslag](Noter/uge14.pdf) (uploades efter TØ)
 
 
 ### Andre bemærkninger
