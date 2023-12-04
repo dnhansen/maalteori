@@ -1,0 +1,340 @@
+\newcommand{\doctitle}{Uge 1}
+\newcommand{\docauthor}{Danny Nygård Hansen}
+
+\documentclass[a4paper, 11pt, article, danish, oneside]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage[autostyle, danish=guillemets]{csquotes}
+
+\usepackage[final]{microtype}
+\frenchspacing
+\raggedbottom
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{kpfonts}
+\linespread{1.06}
+\DeclareMathAlphabet\mathfrak{U}{euf}{m}{n}
+\SetMathAlphabet\mathfrak{bold}{U}{euf}{b}{n}
+\usepackage{inconsolata}
+
+\usepackage{hyperref}
+\hypersetup{%
+	pdftitle=\doctitle,
+	pdfauthor={\docauthor},
+}
+
+\usepackage{enumitem}
+\setenumerate[0]{label=\normalfont(\arabic*)}
+\setlist{
+	listparindent=\parindent,
+	parsep=0pt,
+}
+\usepackage{array}
+
+\title{\doctitle}
+\author{\docauthor}
+
+\newcommand{\overbar}[3]{\mkern #1mu\overline{\mkern-#1mu#3\mkern-#2mu}\mkern #2mu}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\extreals}{\overbar{1.5}{1.5}{\reals}}
+\newcommand{\complex}{\mathbb{C}}
+
+
+\usepackage{pgffor}
+
+\newcommand{\rvar}[1]{\mathsf{#1}}
+
+\foreach \x in {A,...,Z}{%
+    \expandafter\xdef\csname cal\x\endcsname{\noexpand\mathcal{\x}}
+    \expandafter\xdef\csname frak\x\endcsname{\noexpand\mathfrak{\x}}
+    \expandafter\xdef\csname rand\x\endcsname{\noexpand\rvar{\x}}
+}
+
+
+\usepackage{etoolbox}
+\newcommand{\blank}{\mathrel{\;\cdot\;}}
+\newcommand{\blankifempty}[1]{\ifstrempty{#1}{\blank}{#1}}
+\DeclarePairedDelimiter{\auxdelimlvert}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\auxdelimlVert}{\lVert}{\rVert}
+\DeclarePairedDelimiterX{\auxdelimanglescomma}[2]{\langle}{\rangle}{#1,#2}
+\newcommand{\abs}[1]{\auxdelimlvert{\blankifempty{#1}}}
+\newcommand{\norm}[1]{\auxdelimlVert{\blankifempty{#1}}}
+\newcommand{\inner}[2]{\auxdelimanglescomma{\blankifempty{#1}}{\blankifempty{#2}}}
+
+
+\DeclarePairedDelimiter{\auxdelimparen}{(}{)}
+\DeclarePairedDelimiterX{\auxdelimparencomma}[2]{(}{)}{#1,#2}
+\DeclarePairedDelimiter{\auxdelimbracket}{[}{]}
+\DeclarePairedDelimiterX{\auxdelimbracketcomma}[2]{[}{]}{#1,#2}
+\newcommand{\powerset}[2][]{\calP\auxdelimparen[#1]{#2}}
+\newcommand{\borel}[2][]{\calB\auxdelimparen[#1]{#2}}
+\newcommand{\meas}[2][]{\calM\auxdelimparen[#1]{#2}}
+\newcommand{\measC}[2][]{\calM_\complex\auxdelimparen[#1]{#2}}
+\newcommand{\measpos}[2][]{\meas[#1]{#2}^+}
+\newcommand{\measbound}[2][]{\calM_b\auxdelimparen[#1]{#2}}
+\newcommand{\measboundpos}[2][]{\measbound[#1]{#2}^+}
+
+
+\newcommand{\extmeas}[2][]{\overbar{4.5}{0.5}{\calM}\auxdelimparen[#1]{#2}}
+\newcommand{\extmeaspos}[2][]{\extmeas[#1]{#2}^+}
+\newcommand{\simplemeas}[2][]{\calS\!\calM\auxdelimparen[#1]{#2}}
+\newcommand{\simplemeaspos}[2][]{\simplemeas[#1]{#2}^+}
+\newcommand{\sigmaalg}[2][]{\sigma\auxdelimparen[#1]{#2}}
+\newcommand{\deltasys}[2][]{\delta\auxdelimparen[#1]{#2}}
+
+\newcommand{\expval}[2][]{\mathbb{E}\auxdelimbracket[#1]{#2}}
+\newcommand{\var}[2][]{\operatorname{Var}\auxdelimbracket[#1]{#2}}
+\newcommand{\cov}[3][]{\operatorname{Cov}\auxdelimbracketcomma[#1]{#2}{#3}}
+
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\dif}{\mathop{}\!\mathrm{d}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\indicator}[1]{\mathbf{1}_{#1}}
+
+% Lattice operations
+\newcommand{\meet}{\land}
+\newcommand{\join}{\lor}
+
+\DeclareMathOperator*{\smallbigvee}{\textstyle\bigvee}
+\DeclareMathOperator*{\bigjoin}{\mathchoice
+    {\smallbigvee}%
+    {\bigvee}%
+    {\bigvee}%
+    {\bigvee}%
+}
+\DeclareMathOperator*{\smallbigwedge}{\textstyle\bigwedge}
+\DeclareMathOperator*{\bigmeet}{\mathchoice
+    {\smallbigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+}
+
+
+
+\newcommand*\union\cup
+\newcommand*\intersect\cap
+
+\DeclareMathOperator*{\smallbigcup}{\textstyle\bigcup}
+\DeclareMathOperator*{\bigunion}{\mathchoice
+    {\smallbigcup}%
+    {\bigcup}%
+    {\bigcup}%
+    {\bigcup}%
+}
+\DeclareMathOperator*{\smallbigcap}{\textstyle\bigcap}
+\DeclareMathOperator*{\bigintersect}{\mathchoice
+    {\smallbigcap}%
+    {\bigcap}%
+    {\bigcap}%
+    {\bigcap}%
+}
+
+
+\DeclarePairedDelimiterX{\set}[2]{\lbrace}{\rbrace}{#1\;\delimsize\vert\;#2}
+
+\newcommand{\defeq}{\coloneqq}
+\renewcommand{\phi}{\varphi}
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+\DeclareMathOperator{\e}{\mathrm{e}}
+
+\newcommand{\ball}[3][]{%
+    \ifstrempty{#1}%
+        {%
+            b\auxdelimparencomma{#2}{#3}%
+        }{%
+            b_{#1}\auxdelimparencomma{#2}{#3}%
+        }%
+}
+
+\newcommand{\converges}[1]{\xrightarrow[#1]{}}
+\DeclareMathOperator{\supp}{supp}
+\let\oldvec\vec
+\renewcommand{\vec}[1]{\underline{#1}}
+\newcommand{\Tr}[1][]{%
+    \ifstrempty{#1}%
+        {%
+            \operatorname{Tr}%
+        }{%
+            \operatorname{Tr}_{#1}%
+        }%
+}
+
+
+\usepackage{listofitems}
+\setsepchar{,}
+
+\makeatletter
+\newcommand{\mat@dims}[1]{%
+    \readlist*\@dims{#1}%
+    \ifnum \@dimslen=1
+        \def\@dimsout{\@dims[1]}%
+    \else
+        \def\@dimsout{\@dims[1], \@dims[2]}%
+    \fi
+    \@dimsout
+}
+
+
+\newcommand{\matgroup}[3]{\mathrm{#1}_{#2}(#3)}
+\newcommand{\matGL}[2]{\matgroup{GL}{#1}{#2}}
+\newcommand{\trans}{^{\top}}
+\newcommand{\mat}[2]{M_{\mat@dims{#1}}(#2)}
+
+\makeatother
+
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\clSpan}{\overbar{0.5}{1.5}{span}}
+
+\newcommand\inv{^{\langle-1\rangle}}
+\newcommand{\preim}[2][]{^{-1}\auxdelimparen[#1]{#2}}
+
+\newcommand{\dsupp}[2][]{\mathrm{Sp}_d\auxdelimparen[#1]{#2}}
+
+\usepackage[amsmath,thmmarks,hyperref]{ntheorem}
+\usepackage{bbding}
+
+\newcommand{\theorembullet}{{\footnotesize\textbullet}}
+\newcommand{\pencilsymbol}{\raisebox{-2pt}{\normalfont\PencilLeft}}
+\makeatletter
+\newtheoremstyle{changedotcustomnumber}%
+    {}%
+    {\item[\hskip\labelsep \theorem@headerfont ##3~~\theorembullet~~##1\theorem@separator]}
+\newtheoremstyle{changedotbreakcustomnumber}%
+    {}%
+    {\item[\rlap{\vbox{\hbox{\hskip\labelsep \theorem@headerfont
+            ##3~~\theorembullet~~##1\theorem@separator}\hbox{\strut}}}]}
+\makeatother
+
+\theorembodyfont{\normalfont}
+\theoremseparator{~~}
+\theoremsymbol{\ensuremath{\blacksquare}}
+\theoremstyle{changedotcustomnumber}
+\newtheorem{opgave}{\pencilsymbol}
+\theoremstyle{changedotbreakcustomnumber}
+\newtheorem{opgavebreak}{\pencilsymbol}
+
+\newlist{solutionsec}{enumerate}{1}
+\setlist[solutionsec]{leftmargin=0pt, parsep=0pt, listparindent=\parindent, label=(\alph*), labelsep=0pt, labelwidth=20pt, itemindent=20pt, align=left, itemsep=.5\baselineskip}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{opgavebreak}[US1]
+\begin{solutionsec}
+    \item To mængder er (pr. definition) ens hvis de har samme elementer. For f.eks. at vise (A.9), altså at $(A \union B)^c = A^c \intersect B^c$, skal man vise at ethvert element i mængden til venstre for lighedstegnet også ligger i mængden til højre for lighedstegnet, og omvendt. Det kan nogle gange være nyttigt at vise inklusionerne \textquote{$\subseteq$} og \textquote{$\supseteq$} hver for sig. Det er også ofte nyttigt at tegne en figur der repræsenterer mængderne som geometriske figurer (f.eks. cirkler) og lade dette styre ens intuition.
+
+    For at vise et udsagn som (A.17), altså at $A \subseteq B$ medfører $B = A \union (B \setminus A)$, skal man gøre det samme men undervejs benytte antagelsen $A \subseteq B$.
+
+    Bemærk at (A.9) og (A.10) er specialtilfælde af (A.20).
+
+    \item Her er $\calA_3$ stabilt over for $\union$ og $\intersect$, men ikke komplementærmængdedannelse. Derudover er f.eks. $(-\infty,1) = \bigunion_{n \in \naturals} (-\infty, 1-\frac{1}{n}]$, så $\calA_3$ er ikke stabilt over for forening af tælleligt mange mængder.
+
+    Yderligere er $\calA_4$ ikke stabilt over for komplementærmængdedannelse.
+
+    \item Disse udsagn vises med samme teknikker som i (a), idet man selvfølgelig benytter definitionen på urbillede. Hvis f.eks. $x \in f\preim{H^c}$, da er $f(x) \in H^c$. Altså er $f(x) \not\in H$, så $x \not\in f\preim{H}$, og dermed er $x \in f\preim{H}^c$.
+
+    \item Der er selvfølgelig ikke en præcis definition på \textquote{meningsfuldt}, og strengt taget giver alle udsagnene mening. Men udsagnene
+    %
+    \begin{equation*}
+        X \subseteq \calG,
+        \quad
+        \calG \subseteq X
+        \quad \text{og} \quad
+        \{1,3\} \intersect \calG = \emptyset
+    \end{equation*}
+    %
+    er nok ikke udsagn som vi rent faktisk er interesserede i.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[1.1]
+\begin{solutionsec}
+    \item Den eneste svære egenskab at vise er nok trekantsuligheden. Her skal man benytte trekantsuligheden for absolutværdien på $\reals$, samt bemærke at
+    %
+    \begin{equation*}
+        \max_{i=1,\ldots,d} \bigl( \abs{x_i - y_i} + \abs{y_i - z_i} \bigr)
+            \leq \max_{i=1,\ldots,d} \abs{x_i - y_i} + \max_{i=1,\ldots,d} \abs{y_i - z_i}.
+    \end{equation*}
+
+    \item Her er $b_2(\underline{0},2)$ en cirkelskive (uden rand) med radius $2$, og $b_\infty(\underline{0},2)$ er et kvadrat (uden rand) med sidelængde $4$.
+
+    \item Bemærk at hvis $a_1, \ldots, a_d \geq 0$, så er
+    %
+    \begin{equation*}
+        \max\{a_1, \ldots, a_d\}
+            = \bigl( \max\{a_1^2, \ldots, a_d^2\} \bigr)^{1/2}
+            \leq \bigl( a_1^2 + \cdots + a_d^2 \bigr)^{1/2},
+    \end{equation*}
+    %
+    og omvendt er
+    %
+    \begin{equation*}
+        \bigl( a_1^2 + \cdots + a_d^2 \bigr)^{1/2}
+            \leq \bigl( d \max\{a_1^2, \ldots, a_d^2\} \bigr)^{1/2}
+            = \sqrt{d} \max\{a_1, \ldots, a_d\}.
+    \end{equation*}
+
+    \item Benyt (c).
+
+    \item Benyt (d).
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[1.2]
+\begin{solutionsec}
+    \item Her hjælper det at tegne en figur. For $\rationals$, lad $a,b \in \reals$ med $a < b$. Vælg et $n \in \naturals$ så $\frac{1}{n} < b-a$, og lad $m \in \ints$ være det mindste heltal med $m > an$. Så er $a < \frac{m}{n} < b$, hvor den sidste ulighed følger da $m-1 \leq an$, så
+    %
+    \begin{equation*}
+        \frac{m}{n}
+            = \frac{m-1}{n} + \frac{1}{n}
+            < a + b - a
+            = b.
+    \end{equation*}
+    %
+    For $\reals \setminus \rationals$ kan man f.eks. gøre det samme, men erstatte $n$ med $\sqrt{2}n$. Man kan også, for $a < b$, finde et $q \in \rationals$ så
+    %
+    \begin{equation*}
+        \frac{a}{\sqrt{2}}
+            < q
+            < \frac{b}{\sqrt{2}},
+    \end{equation*}
+    %
+    hvilket medfører at
+    %
+    \begin{equation*}
+        a
+            < \sqrt{2}q
+            < b,
+    \end{equation*}
+    %
+    som ønsket.
+
+    \item Det er tilstrækkeligt at vise udsagnene for $\rho_\infty$, da enhver $\rho_2$-kugle indeholder en $\rho_\infty$-kugle. For $\rationals^d$, hvis $\underline{x} = (x_1, \ldots, x_d) \in \rationals^d$, vælg da $q_1, \ldots, q_d \in \rationals$ med $q_j \in (x_j - r, x_j + r)$. Hvis $\underline{q} = (q_1, \ldots, q_d)$, så er $\underline{q} \in b_\infty(\underline{x},r)$.
+
+    Tilfældet $(\reals \setminus \rationals)^d$ vises tilsvarende, og det sidste tilfælde følger eftersom $(\reals \setminus \rationals)^d \subseteq \reals^d \setminus \rationals^d$.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgave}[1.17]
+    Vi nøjes med at vise del (a), idet de andre to delopgaver vises tilsvarende.
+
+    Antag først at $\lim_{t \to a} F(t) = c$, og lad $(t_n)$ være en følge i $I \setminus \{a\}$ som opfylder at $\lim_{n \to \infty} t_n = a$. Lad $\epsilon > 0$, og vælg $\delta > 0$ så $\abs{F(t) - c} < \epsilon$ for $t \in I \setminus \{a\}$ med $\abs{t - a} < \delta$. Vælg nu $N \in \naturals$ så $n \geq N$ medfører at $\abs{t_n - a} < \delta$. For $n \geq N$ følger det da at $\abs{F(t_n) - c} < \epsilon$, hvilket viser at $\lim_{n \to \infty} F(t_n) = c$ som ønsket.
+
+    Den omvendte implikation vises ved kontraponering. Antag derfor at $F(t)$ \emph{ikke} konvergerer mod $c$ for $t \to a$. Der findes da et $\epsilon > 0$ så der for ethvert $\delta > 0$ findes et $t \in I \setminus \{a\}$ således at $\abs{t - a} < \delta$ og $\abs{F(t) - c} \geq \epsilon$. Lad sådan et $\epsilon$ være givet. For ethvert $n \in \naturals$ findes da et $t_n \in I \setminus \{a\}$ så $\abs{t_n - a} < \frac{1}{n}$ og $\abs{F(t_n) - c} \geq \epsilon$. Det følger da at $t_n \to a$ men $F(t_n) \not\to c$.
+\end{opgave}
+
+\end{document}

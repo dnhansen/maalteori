@@ -1,0 +1,328 @@
+\newcommand{\doctitle}{Uge 10}
+\newcommand{\docauthor}{Danny Nygård Hansen}
+
+\documentclass[a4paper, 11pt, article, danish, oneside]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage[autostyle, danish=guillemets]{csquotes}
+
+\usepackage[final]{microtype}
+\frenchspacing
+\raggedbottom
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[largesmallcaps]{kpfonts}
+\linespread{1.06}
+\DeclareMathAlphabet\mathfrak{U}{euf}{m}{n}
+\SetMathAlphabet\mathfrak{bold}{U}{euf}{b}{n}
+\usepackage{inconsolata}
+
+\usepackage{hyperref}
+\hypersetup{%
+	pdftitle=\doctitle,
+	pdfauthor={\docauthor},
+    hidelinks,
+}
+
+\usepackage{enumitem}
+\setenumerate[0]{label=\normalfont(\arabic*)}
+\setlist{
+	listparindent=\parindent,
+	parsep=0pt,
+}
+\usepackage{array}
+
+\title{\doctitle}
+\author{\docauthor}
+
+\newcommand{\overbar}[3]{\mkern #1mu\overline{\mkern-#1mu#3\mkern-#2mu}\mkern #2mu}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\extreals}{\overbar{1.5}{1.5}{\reals}}
+\newcommand{\complex}{\mathbb{C}}
+
+
+\usepackage{pgffor}
+
+\newcommand{\rvar}[1]{\mathsf{#1}}
+
+\foreach \x in {A,...,Z}{%
+    \expandafter\xdef\csname cal\x\endcsname{\noexpand\mathcal{\x}}
+    \expandafter\xdef\csname frak\x\endcsname{\noexpand\mathfrak{\x}}
+    \expandafter\xdef\csname rand\x\endcsname{\noexpand\rvar{\x}}
+}
+
+
+\usepackage{etoolbox}
+\newcommand{\blank}{\mathrel{\;\cdot\;}}
+\newcommand{\blankifempty}[1]{\ifstrempty{#1}{\blank}{#1}}
+\DeclarePairedDelimiter{\auxdelimlvert}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\auxdelimlVert}{\lVert}{\rVert}
+\DeclarePairedDelimiterX{\auxdelimanglescomma}[2]{\langle}{\rangle}{#1,#2}
+\newcommand{\abs}[2][]{\auxdelimlvert[#1]{\blankifempty{#2}}}
+\newcommand{\norm}[1]{\auxdelimlVert{\blankifempty{#1}}}
+\newcommand{\inner}[2]{\auxdelimanglescomma{\blankifempty{#1}}{\blankifempty{#2}}}
+
+
+\DeclarePairedDelimiter{\auxdelimparen}{(}{)}
+\DeclarePairedDelimiterX{\auxdelimparencomma}[2]{(}{)}{#1,#2}
+\DeclarePairedDelimiter{\auxdelimbracket}{[}{]}
+\DeclarePairedDelimiterX{\auxdelimbracketcomma}[2]{[}{]}{#1,#2}
+\newcommand{\powerset}[2][]{\calP\auxdelimparen[#1]{#2}}
+\newcommand{\borel}[2][]{\calB\auxdelimparen[#1]{#2}}
+\newcommand{\meas}[2][]{\calM\auxdelimparen[#1]{#2}}
+\newcommand{\measC}[2][]{\calM_\complex\auxdelimparen[#1]{#2}}
+\newcommand{\measpos}[2][]{\meas[#1]{#2}^+}
+\newcommand{\measbound}[2][]{\calM_b\auxdelimparen[#1]{#2}}
+\newcommand{\measboundpos}[2][]{\measbound[#1]{#2}^+}
+
+
+\newcommand{\extmeas}[2][]{\overbar{4.5}{0.5}{\calM}\auxdelimparen[#1]{#2}}
+\newcommand{\extmeaspos}[2][]{\extmeas[#1]{#2}^+}
+\newcommand{\simplemeas}[2][]{\calS\!\calM\auxdelimparen[#1]{#2}}
+\newcommand{\simplemeaspos}[2][]{\simplemeas[#1]{#2}^+}
+\newcommand{\sigmaalg}[2][]{\sigma\auxdelimparen[#1]{#2}}
+\newcommand{\deltasys}[2][]{\delta\auxdelimparen[#1]{#2}}
+
+\newcommand{\expval}[2][]{\mathbb{E}\auxdelimbracket[#1]{#2}}
+\newcommand{\var}[2][]{\operatorname{Var}\auxdelimbracket[#1]{#2}}
+\newcommand{\cov}[3][]{\operatorname{Cov}\auxdelimbracketcomma[#1]{#2}{#3}}
+
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\dif}{\mathop{}\!\mathrm{d}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\indicator}[1]{\mathbf{1}_{#1}}
+
+% Lattice operations
+\newcommand{\meet}{\land}
+\newcommand{\join}{\lor}
+
+\DeclareMathOperator*{\smallbigvee}{\textstyle\bigvee}
+\DeclareMathOperator*{\bigjoin}{\mathchoice
+    {\smallbigvee}%
+    {\bigvee}%
+    {\bigvee}%
+    {\bigvee}%
+}
+\DeclareMathOperator*{\smallbigwedge}{\textstyle\bigwedge}
+\DeclareMathOperator*{\bigmeet}{\mathchoice
+    {\smallbigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+}
+
+
+
+\newcommand*\union\cup
+\newcommand*\intersect\cap
+
+\DeclareMathOperator*{\smallbigcup}{\textstyle\bigcup}
+\DeclareMathOperator*{\bigunion}{\mathchoice
+    {\smallbigcup}%
+    {\bigcup}%
+    {\bigcup}%
+    {\bigcup}%
+}
+\DeclareMathOperator*{\smallbigcap}{\textstyle\bigcap}
+\DeclareMathOperator*{\bigintersect}{\mathchoice
+    {\smallbigcap}%
+    {\bigcap}%
+    {\bigcap}%
+    {\bigcap}%
+}
+
+
+\DeclarePairedDelimiterX{\set}[2]{\lbrace}{\rbrace}{#1\;\delimsize\vert\;#2}
+
+\newcommand{\defeq}{\coloneqq}
+\newcommand{\eqdef}{\eqqcolon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+\DeclareMathOperator{\e}{\mathrm{e}}
+
+\newcommand{\ball}[3][]{%
+    \ifstrempty{#1}%
+        {%
+            b\auxdelimparencomma{#2}{#3}%
+        }{%
+            b_{#1}\auxdelimparencomma{#2}{#3}%
+        }%
+}
+
+\newcommand{\converges}[1]{\xrightarrow[#1]{}}
+\DeclareMathOperator{\supp}{supp}
+\let\oldvec\vec
+\renewcommand{\vec}[1]{\underline{#1}}
+\newcommand{\Tr}[1][]{%
+    \ifstrempty{#1}%
+        {%
+            \operatorname{Tr}%
+        }{%
+            \operatorname{Tr}_{#1}%
+        }%
+}
+
+
+\usepackage{listofitems}
+\setsepchar{,}
+
+\makeatletter
+\newcommand{\mat@dims}[1]{%
+    \readlist*\@dims{#1}%
+    \ifnum \@dimslen=1
+        \def\@dimsout{\@dims[1]}%
+    \else
+        \def\@dimsout{\@dims[1], \@dims[2]}%
+    \fi
+    \@dimsout
+}
+
+
+\newcommand{\matgroup}[3]{\mathrm{#1}_{#2}(#3)}
+\newcommand{\matGL}[2]{\matgroup{GL}{#1}{#2}}
+\newcommand{\trans}{^{\top}}
+\newcommand{\mat}[2]{M_{\mat@dims{#1}}(#2)}
+
+\makeatother
+
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\clSpan}{\overbar{0.5}{1.5}{span}}
+
+\newcommand\inv{^{-1}}
+\newcommand{\preim}[2][]{^{-1}\auxdelimparen[#1]{#2}}
+
+\newcommand{\dsupp}[2][]{\mathrm{Sp}_d\auxdelimparen[#1]{#2}}
+
+\usepackage[amsmath,thmmarks,hyperref]{ntheorem}
+\usepackage{bbding}
+
+\newcommand{\theorembullet}{{\footnotesize\textbullet}}
+\newcommand{\pencilsymbol}{\raisebox{-2pt}{\normalfont\PencilLeft}}
+\makeatletter
+\newtheoremstyle{changedotcustomnumber}%
+    {}%
+    {\item[\hskip\labelsep \theorem@headerfont ##3~~\theorembullet~~##1\theorem@separator]}
+\newtheoremstyle{changedotbreakcustomnumber}%
+    {}%
+    {\item[\rlap{\vbox{\hbox{\hskip\labelsep \theorem@headerfont
+            ##3~~\theorembullet~~##1\theorem@separator}\hbox{\strut}}}]}
+\makeatother
+
+\theorembodyfont{\normalfont}
+\theoremseparator{~~}
+\theoremsymbol{\ensuremath{\blacksquare}}
+\theoremstyle{changedotcustomnumber}
+\newtheorem{opgave}{\pencilsymbol}
+\theoremstyle{changedotbreakcustomnumber}
+\newtheorem{opgavebreak}{\pencilsymbol}
+
+\newlist{solutionsec}{enumerate}{1}
+\setlist[solutionsec]{leftmargin=0pt, parsep=0pt, listparindent=\parindent, label=(\alph*), labelsep=0pt, labelwidth=20pt, itemindent=20pt, align=left, itemsep=.5\baselineskip}
+
+
+\begin{document}
+
+\maketitle
+
+% • 7.10, 7.16.
+% • 8.1, 8.2.
+% • 7.17, 7.9.
+
+\begin{opgavebreak}[7.10]
+\begin{solutionsec}
+    \item Funktionen $x \mapsto x^{-1/s} \indicator{(1,\infty)}(x)$ ligger i $\calL^r(\lambda)$ men ikke i $\calL^s(\lambda)$, og det omvendte gælder for $x \mapsto x^{-1/r} \indicator{(0,1)}(x)$. (Sammenlign Sætning~7.3.2(ii).)
+
+    \item Funktionen $x \mapsto 1$ ligger i $\calL^\infty(\lambda)$ men ikke i $\calL^r(\lambda)$, og det omvendte gælder f.eks. funktionen $x \mapsto x^{-1/s} \indicator{(1,\infty)}(x)$ fra del (a). (Sammenlign Opgave~7.6(b).)
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgave}[7.16]
+    Bemærk at
+    %
+    \begin{equation*}
+        \int_X \abs{f - g} \dif\mu
+            = \int_X \liminf_{n \to \infty} \abs{f - f_n} \dif\mu
+            \leq \liminf_{n \to \infty} \int_X \abs{f - f_n} \dif\mu
+            = 0
+    \end{equation*}
+    %
+    ved Fatous lemma, så $f = g$ $\mu$-n.o.
+\end{opgave}
+
+
+\begin{opgavebreak}[8.1]
+\begin{solutionsec}
+    \item Bemærk at $\Re(f)$ og $\Im(f)$ er kontinuerte og derfor har stamfunktioner, sig hhv. $F_1$ og $F_2$. Da er $F_1 + \iu F_2$ en stamfunktion for $f$.
+    
+    \item Da er $f \indicator{I}$ begrænset og dermed integrabel. Lad $F$ være stamfunktionen fra del (a).
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[8.2]
+\begin{solutionsec}
+    \item Bemærk at $x \mapsto \exp(kx)$ er integrabel på $[0,\infty)$ netop når $k < 0$, så $K = \set{z \in \complex}{\Re(z) < 0}$.
+
+    \item Find en stamfunktion for $f_z$, og beregn integralet af $f \indicator{[0,n]}$ for ethvert $n \in \naturals$, jf. vinket (bemærk at $f \indicator{[0,\infty)}$ er en integrabel majorant). Vi finder
+    %
+    \begin{equation*}
+        \int_0^\infty f_z \dif\lambda
+            = - \frac{1}{z}.
+    \end{equation*}
+
+    \item Bemærk at
+    %
+    \begin{equation*}
+        \frac{1}{a + \iu b}
+            = \frac{a - \iu b}{a^2 + b^2},
+    \end{equation*}
+    %
+    og betragt real- og imaginærdelene af integralet fra del (b) med $z = a + \iu b$.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[7.17]
+\begin{solutionsec}
+    \item Bemærk at
+    %
+    \begin{equation*}
+        \norm{u}
+            = \norm{(u - v) + v}
+            \leq \norm{u - v} + \norm{v}.
+    \end{equation*}
+
+    \item Dette følger direkte af del (a).
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[7.9]
+\begin{solutionsec}
+    \item Vis at funktionen $x \mapsto (1 + x^2)^{-1/2}$ ligger i $\calL^2(\lambda)$ og benyt Hölders ulighed.
+
+    \item Bemærk f.eks. at $1 \leq 0 + \cos(0)$, og at funktionen $x \mapsto x + \cos(x)$ er voksende på $[0,\infty)$. Vi har da for $x \in (0,1]$ at
+    %
+    \begin{equation*}
+        \abs{h(x)}
+            \leq x^{\gamma - 1/5}.
+    \end{equation*}
+    %
+    Det er da let at tjekke at $h \in \calL^5(\lambda)$, så det ønskede følger af Hölders ulighed.
+
+    \item Ifølge Sætning~7.3.2(ii) ligger $f|_{(0,1]}$ da også i $\calL^{5/4}(\lambda^r_{(0,1]})$.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+
+\end{document}

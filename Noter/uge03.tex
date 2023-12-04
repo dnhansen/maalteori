@@ -1,0 +1,322 @@
+\newcommand{\doctitle}{Uge 3}
+\newcommand{\docauthor}{Danny Nygård Hansen}
+
+\documentclass[a4paper, 11pt, article, danish, oneside]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage[autostyle, danish=guillemets]{csquotes}
+
+\usepackage[final]{microtype}
+\frenchspacing
+\raggedbottom
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[largesmallcaps]{kpfonts}
+\linespread{1.06}
+\DeclareMathAlphabet\mathfrak{U}{euf}{m}{n}
+\SetMathAlphabet\mathfrak{bold}{U}{euf}{b}{n}
+\usepackage{inconsolata}
+
+\usepackage{hyperref}
+\hypersetup{%
+	pdftitle=\doctitle,
+	pdfauthor={\docauthor},
+    hidelinks,
+}
+
+\usepackage{enumitem}
+\setenumerate[0]{label=\normalfont(\arabic*)}
+\setlist{
+	listparindent=\parindent,
+	parsep=0pt,
+}
+\usepackage{array}
+
+\title{\doctitle}
+\author{\docauthor}
+
+\newcommand{\overbar}[3]{\mkern #1mu\overline{\mkern-#1mu#3\mkern-#2mu}\mkern #2mu}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\extreals}{\overbar{1.5}{1.5}{\reals}}
+\newcommand{\complex}{\mathbb{C}}
+
+
+\usepackage{pgffor}
+
+\newcommand{\rvar}[1]{\mathsf{#1}}
+
+\foreach \x in {A,...,Z}{%
+    \expandafter\xdef\csname cal\x\endcsname{\noexpand\mathcal{\x}}
+    \expandafter\xdef\csname frak\x\endcsname{\noexpand\mathfrak{\x}}
+    \expandafter\xdef\csname rand\x\endcsname{\noexpand\rvar{\x}}
+}
+
+
+\usepackage{etoolbox}
+\newcommand{\blank}{\mathrel{\;\cdot\;}}
+\newcommand{\blankifempty}[1]{\ifstrempty{#1}{\blank}{#1}}
+\DeclarePairedDelimiter{\auxdelimlvert}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\auxdelimlVert}{\lVert}{\rVert}
+\DeclarePairedDelimiterX{\auxdelimanglescomma}[2]{\langle}{\rangle}{#1,#2}
+\newcommand{\abs}[1]{\auxdelimlvert{\blankifempty{#1}}}
+\newcommand{\norm}[1]{\auxdelimlVert{\blankifempty{#1}}}
+\newcommand{\inner}[2]{\auxdelimanglescomma{\blankifempty{#1}}{\blankifempty{#2}}}
+
+
+\DeclarePairedDelimiter{\auxdelimparen}{(}{)}
+\DeclarePairedDelimiterX{\auxdelimparencomma}[2]{(}{)}{#1,#2}
+\DeclarePairedDelimiter{\auxdelimbracket}{[}{]}
+\DeclarePairedDelimiterX{\auxdelimbracketcomma}[2]{[}{]}{#1,#2}
+\newcommand{\powerset}[2][]{\calP\auxdelimparen[#1]{#2}}
+\newcommand{\borel}[2][]{\calB\auxdelimparen[#1]{#2}}
+\newcommand{\meas}[2][]{\calM\auxdelimparen[#1]{#2}}
+\newcommand{\measC}[2][]{\calM_\complex\auxdelimparen[#1]{#2}}
+\newcommand{\measpos}[2][]{\meas[#1]{#2}^+}
+\newcommand{\measbound}[2][]{\calM_b\auxdelimparen[#1]{#2}}
+\newcommand{\measboundpos}[2][]{\measbound[#1]{#2}^+}
+
+
+\newcommand{\extmeas}[2][]{\overbar{4.5}{0.5}{\calM}\auxdelimparen[#1]{#2}}
+\newcommand{\extmeaspos}[2][]{\extmeas[#1]{#2}^+}
+\newcommand{\simplemeas}[2][]{\calS\!\calM\auxdelimparen[#1]{#2}}
+\newcommand{\simplemeaspos}[2][]{\simplemeas[#1]{#2}^+}
+\newcommand{\sigmaalg}[2][]{\sigma\auxdelimparen[#1]{#2}}
+\newcommand{\deltasys}[2][]{\delta\auxdelimparen[#1]{#2}}
+
+\newcommand{\expval}[2][]{\mathbb{E}\auxdelimbracket[#1]{#2}}
+\newcommand{\var}[2][]{\operatorname{Var}\auxdelimbracket[#1]{#2}}
+\newcommand{\cov}[3][]{\operatorname{Cov}\auxdelimbracketcomma[#1]{#2}{#3}}
+
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\dif}{\mathop{}\!\mathrm{d}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\indicator}[1]{\mathbf{1}_{#1}}
+
+% Lattice operations
+\newcommand{\meet}{\land}
+\newcommand{\join}{\lor}
+
+\DeclareMathOperator*{\smallbigvee}{\textstyle\bigvee}
+\DeclareMathOperator*{\bigjoin}{\mathchoice
+    {\smallbigvee}%
+    {\bigvee}%
+    {\bigvee}%
+    {\bigvee}%
+}
+\DeclareMathOperator*{\smallbigwedge}{\textstyle\bigwedge}
+\DeclareMathOperator*{\bigmeet}{\mathchoice
+    {\smallbigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+}
+
+
+
+\newcommand*\union\cup
+\newcommand*\intersect\cap
+
+\DeclareMathOperator*{\smallbigcup}{\textstyle\bigcup}
+\DeclareMathOperator*{\bigunion}{\mathchoice
+    {\smallbigcup}%
+    {\bigcup}%
+    {\bigcup}%
+    {\bigcup}%
+}
+\DeclareMathOperator*{\smallbigcap}{\textstyle\bigcap}
+\DeclareMathOperator*{\bigintersect}{\mathchoice
+    {\smallbigcap}%
+    {\bigcap}%
+    {\bigcap}%
+    {\bigcap}%
+}
+
+
+\DeclarePairedDelimiterX{\set}[2]{\lbrace}{\rbrace}{#1\;\delimsize\vert\;#2}
+
+\newcommand{\defeq}{\coloneqq}
+\renewcommand{\phi}{\varphi}
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+\DeclareMathOperator{\e}{\mathrm{e}}
+
+\newcommand{\ball}[3][]{%
+    \ifstrempty{#1}%
+        {%
+            b\auxdelimparencomma{#2}{#3}%
+        }{%
+            b_{#1}\auxdelimparencomma{#2}{#3}%
+        }%
+}
+
+\newcommand{\converges}[1]{\xrightarrow[#1]{}}
+\DeclareMathOperator{\supp}{supp}
+\let\oldvec\vec
+\renewcommand{\vec}[1]{\underline{#1}}
+\newcommand{\Tr}[1][]{%
+    \ifstrempty{#1}%
+        {%
+            \operatorname{Tr}%
+        }{%
+            \operatorname{Tr}_{#1}%
+        }%
+}
+
+
+\usepackage{listofitems}
+\setsepchar{,}
+
+\makeatletter
+\newcommand{\mat@dims}[1]{%
+    \readlist*\@dims{#1}%
+    \ifnum \@dimslen=1
+        \def\@dimsout{\@dims[1]}%
+    \else
+        \def\@dimsout{\@dims[1], \@dims[2]}%
+    \fi
+    \@dimsout
+}
+
+
+\newcommand{\matgroup}[3]{\mathrm{#1}_{#2}(#3)}
+\newcommand{\matGL}[2]{\matgroup{GL}{#1}{#2}}
+\newcommand{\trans}{^{\top}}
+\newcommand{\mat}[2]{M_{\mat@dims{#1}}(#2)}
+
+\makeatother
+
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\clSpan}{\overbar{0.5}{1.5}{span}}
+
+\newcommand\inv{^{\langle-1\rangle}}
+\newcommand{\preim}[2][]{^{-1}\auxdelimparen[#1]{#2}}
+
+\newcommand{\dsupp}[2][]{\mathrm{Sp}_d\auxdelimparen[#1]{#2}}
+
+\usepackage[amsmath,thmmarks,hyperref]{ntheorem}
+\usepackage{bbding}
+
+\newcommand{\theorembullet}{{\footnotesize\textbullet}}
+\newcommand{\pencilsymbol}{\raisebox{-2pt}{\normalfont\PencilLeft}}
+\makeatletter
+\newtheoremstyle{changedotcustomnumber}%
+    {}%
+    {\item[\hskip\labelsep \theorem@headerfont ##3~~\theorembullet~~##1\theorem@separator]}
+\newtheoremstyle{changedotbreakcustomnumber}%
+    {}%
+    {\item[\rlap{\vbox{\hbox{\hskip\labelsep \theorem@headerfont
+            ##3~~\theorembullet~~##1\theorem@separator}\hbox{\strut}}}]}
+\makeatother
+
+\theorembodyfont{\normalfont}
+\theoremseparator{~~}
+\theoremsymbol{\ensuremath{\blacksquare}}
+\theoremstyle{changedotcustomnumber}
+\newtheorem{opgave}{\pencilsymbol}
+\theoremstyle{changedotbreakcustomnumber}
+\newtheorem{opgavebreak}{\pencilsymbol}
+
+\newlist{solutionsec}{enumerate}{1}
+\setlist[solutionsec]{leftmargin=0pt, parsep=0pt, listparindent=\parindent, label=(\alph*), labelsep=0pt, labelwidth=20pt, itemindent=20pt, align=left, itemsep=.5\baselineskip}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{opgavebreak}[1.8]
+\begin{solutionsec}
+    \item En forening af tælleligt mange tællelig mængder er selv tællelig.
+
+    \item Bemærk at det er tilstrækkeligt at vise at $\set{A_n}{n \in \naturals} \subseteq \calE_B$. Dette følger da $A_n$ og $B$ er disjunkte.
+    
+    \item Bemærk at $\{x\} \not\in \calE_B$ og benyt (b).
+
+    \item Hvis $A_n'$ ikke er tællelig, skift da denne ud med sit (tællelige) komplement.
+
+    \item Benyt (c).
+
+    \item Benyt at tællelige mængder er Borelmængder (jf. Opgave~1.3(b)).
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[1.10]
+\begin{solutionsec}
+    \item Overvej eksempelvis at
+    %
+    \begin{equation*}
+        A \union B
+            = A \union (B \setminus A)
+            = A \union \bigl( B \setminus (A \intersect B) \bigr).
+    \end{equation*}
+
+    \item Hvad går galt hvis $\mu(A \intersect B) = \infty$?
+
+    \item Hvad gik galt i (b)? Hvilken antagelse løser dette problem?
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[1.12]
+    For at vise $\sigma$-additivitet, bemærk at
+    %
+    \begin{equation*}
+        \Bigl( \bigunion_{n \in \naturals} B_n \Bigr) \intersect A
+            = \bigunion_{n \in \naturals} (B_n \intersect A)
+    \end{equation*}
+    %
+    for enhver følge $(B_n)$ fra $\calE$.
+\end{opgavebreak}
+
+
+\begin{opgave}[1.13]
+    Bemærk først at hvis $\nu$ er et mål og $a \in [0,\infty)$, da er $a \nu$ også et mål (vis dette!). Vi kan derfor antage at $a_n = 1$ for alle $n \in \naturals$. For at vise $\sigma$-additivitet, bemærk at hvis $(A_k)$ er en følge af parvist disjunkte mængder fra $\calE$, så er
+    %
+    \begin{equation*}
+        \mu \Bigl( \bigunion_{k \in \naturals} A_k \Bigr)
+            = \sum_{n=1}^\infty \mu_n \Bigl( \bigunion_{k \in \naturals} A_k \Bigr)
+            = \sum_{n=1}^\infty \sum_{k=1}^\infty \mu_n(A_k).
+    \end{equation*}
+    %
+    Benyt da Lemma~A.2.14 og regn videre.
+\end{opgave}
+
+
+\begin{opgavebreak}[1.15]
+\begin{solutionsec}
+    \item Bemærk at
+    %
+    \begin{equation*}
+        \mu \Bigl( \bigintersect_{n \in \naturals} B_n \Bigr)
+            \leq \mu(B_n)
+    \end{equation*}
+    %
+    for alle $n$, og tag infimum på højresiden. Den anden ulighed vises tilsvarende.
+
+    \item Følger af (a), da følgen $(\mu(B_n))$ i så fald også er aftagende.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgave}[1.16]
+    Vi henviser til Sætning~7.2.6.
+\end{opgave}
+
+
+\begin{opgavebreak}[1.19]
+\begin{solutionsec}
+    \item Skriv f.eks. $\reals^d$ som en forening af \textquote{kasser}.
+
+    \item Benyt at en tællelig forening af endelige mængder selv er tællelig.
+\end{solutionsec}
+\end{opgavebreak}
+
+\end{document}
