@@ -322,7 +322,56 @@ TODO
 
 ### Vigtige resultater
 
-TODO
+#### Kapitel 1: $\sigma$-algebra og mål
+
+- Sætning 1.1.6 og Sætning 1.1.7: Enhver delmængde $\mathcal{D}$ af $\mathcal{P}(X)$ frembringer en $\sigma$-algebra $\sigma(\mathcal{D})$, og dette er den *mindste* $\sigma$-algebra som indeholder $\mathcal{D}$. Dette giver $\sigma(\mathcal{D})$ en række egenskaber som minder om egenskaberne ved f.eks. det lineære span eller supremum/infimum af en mængde (se f.eks. Sætning 1.1.11). Bemærk at $\delta$-systemer opfører sig tilsvarende, jf. Sætning 2.1.5. Disse er resultater som man ikke bør huske ordret, men man i stedet bør gøre sit bedste for at forstå.
+- Sætning 1.2.4 og Korollar 1.2.6: Borelalgebraen $\mathcal{B}(\mathbb{R}^d)$ er tælleligt frembragt og har flere vigtige frembringersystemer. Frembringersystemet i (1.15) er f.eks. vigtigt i sandsynlighedsteori, idet det fører til at fordelingen af en stokatisk variabel er entydigt bestemt af dens fordelingsfunktion (jf. 13.1.5). Beviserne for disse resultater er tekniske, og I vil formentlig ikke blive spurgt ind til dem til eksamen.
+- Sætning 1.3.4: Husk især del (v) og (vi) ("kontinuiteten" af mål).
+
+#### Kapitel 2: Dynkins lemma og entydighed af mål
+
+- Lemma 2.1.4 og Sætning 2.1.7: At et $\cap$-stabilt $\delta$-system er en $\sigma$-algebra bør gerne være rimelig naturligt. Dynkins lemma omtales [nedenfor](#spørgsmål).
+- Sætning 2.2.1 og Hovedsætning 2.2.2: Disse omtales ligeledes [nedenfor](#spørgsmål).
+
+#### Kapitel 3: Konstruktion af mål
+
+Ikke pensum
+
+#### Kapitel 4: Målelige funktioner og afbildninger
+
+- Sætning 4.1.6: Del (i)-(iii) er teoretisk vigtige, men del (iv) og (v) er centrale også i anvendelser (f.eks. medfører del (iv) at kontinuerte funktioner er Borel-målelige, jf. Sætning 4.1.9).
+- Sætning 4.1.9 og Sætning 4.2.4: Kontinuerte funktioner er Borel-målelige; dette bør sidde på rygraden. Dette medfører også at f.eks. summer og produkter af målelige funktioner er målelige, hvilket ligeledes bør være naturligt.
+- Sætning 4.3.6 og Korollar 4.3.7: Supremum, infimum og grænser af følger af målelige funktioner er målelige. Beviserne er nok ikke super vigtige, men resultaterne er essentielle.
+- Sætning 4.4.3 og Korollar 4.4.7: "Tuborg-resultaterne".
+- Sætning 4.5.3: Beviset er teknisk, men det er godt i hvert fald at kunne tegne en tegning som illustrerer beviset (se Figur 3). For anvendelser, se især Sætning 5.2.7.
+
+#### Kapitel 5: Lebesgueintegralet
+
+- Lemma 5.1.1: Om ikke andet er det vigtigt at holde sig for øje at der faktisk er et spørgsmål om veldefinerethed.
+- Sætning 5.1.3: Her er beviset for del (iii) en smule træls (bemærk lighederne med beviset for Lemma 5.1.1), men de andre skulle være ret naturlige.
+- Lemma 5.2.3: Bemærk som for Lemma 5.1.1 at der faktisk er noget at bevise.
+- Hovedsætning 5.2.4 og Sætning 5.2.7: Hovedsætning 5.2.4 omtales [nedenfor](#spørgsmål). Bemærk hvordan vi anvender Sætning 4.5.3 og monoton konvergens i beviset for del (ii) og (iii) i Sætning 5.2.7.
+- Sætning 5.2.9: Dette resultat er selv sagt vigtigt, men prøv at forstå det som en direkte konsekvens af monoton konvergens og linearitet af integralet.
+- Hovedsætning 5.2.11: Entydighed af integralet. Beviset er essentielt en løsning af [Cauchys funktionalligning](https://en.wikipedia.org/wiki/Cauchy%27s_functional_equation). Bemærk at vi ofte (men ikke altid, se f.eks. Eksempel 5.2.13) benytter denne sætning når vi ønsker at fastlægge hvordan man integrerer med hensyn til et bestemt mål (f.eks. i Sætning 10.1.4 og Sætning 11.1.4).
+- Sætning 5.3.6, Sætning 5.4.3, Sætning 5.4.6 og Korollar 5.4.9: Disse er helt fundamentale resultater som gerne må sidde på rygraden (ikke deres beviser).
+- Sætning 5.5.1, Sætning 5.5.2 og Hovedsætning 5.5.3: De tre "helte" i integrationsteorien. *Skal* sidde på rygraden. Beviserne for generaliseret monoton konvergens og Fatous lemma er tekniske, men de sørger bare for at vi kan anvende Hovedsætning 5.2.4. Detaljerne er formentligt ikke så vigtige.
+- Diverse resultater fra ugesedlerne som tillader at erstatte Lebesgueintegraler med Riemannintegraler (eller evt. Hovedsætning 5.7.3).
+
+#### Kapitel 6: Produktmål
+
+#### Kapitel 7: Integraluligheder og $\mathcal{L}^p$-rum
+
+#### Kapitel 8: Målelighed og integration af komplekse funktioner
+
+#### Kapitel 9: Hilbertrum
+
+#### Kapitel 10: Tætheder og absolut kontinuitet
+
+#### Kapitel 11: Transformation
+
+#### Kapitel 12: Fouriertransformationen
+
+#### Kapitel 13: Grundlæggende begreber i sandsynlighedsteori
 
 
 ### Spørgsmål
