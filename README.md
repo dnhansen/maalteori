@@ -291,7 +291,7 @@ Ikke flere afleveringer! Alle besvarelser skal være afleveret og godkendt inden
 
 - 12.5: Jo mere differentiabel en funktion er, jo pænere opfører dens Fouriertransformerede sig.
 - 13.2: En rimelig abstrakt opgave. *Vink*: Se på fordelingsfunktionen for $\mathsf{X}$ og overvej hvordan den kan opføre sig.
-- 12.7: *Vink til del (b)*: Benyt at diverse funktioner er lige til at antage $x,y \geq 0$, og husk at $2(x \vee y) = \lvert x-y \rvert + x+y$.
+- 12.7: *Vink til del (b)*: Udnyt translationsinvarians, benyt at diverse funktioner er lige til at antage $x,y \geq 0$, og husk at $2(x \vee y) = \lvert x-y \rvert + x+y$.
 - 13.4
 - 13.5: Del (b) viser specielt at det sandsynlighedsfelt som en stokatisk variabel er defineret på, ikke har så meget at sige.
 - US Opgave A
@@ -307,6 +307,20 @@ TODO
 ## Eksamen
 
 ### Generelle råd
+
+- Memoriser *alle* definitioner i bogen.
+- Hvis der er noget du ikke forstår, så sørg for at du kan huske alle indgående definitioner. Du vil ikke at være i stand til at vise at noget er en ortonormalbasis, hvis du ikke kan huske hvad en ortonormalbasis er.
+- I stedet for at memorisere alle resultater, prøv at opnå en forståelse for *hvorfor* resultatet er sandt, eller hvad de vigtigste ingredienser i beviset er. Dette er ikke altid muligt, men det kan ofte lade sig gøre at forstå i hvert fald essensen af et bevis på denne måde. Vi giver nogle eksempler:
+    - Hvilke antagelser er der på målene $\mu$ og $\nu$ for at kunne bruge Tonellis eller Fubinis sætninger til at bytte om på integrationsrækkefølgen i et itereret integral? Vi anvender her produktmålet $\mu \otimes \nu$, så $\mu$ og $\nu$ skal være $\sigma$-endelige, ellers giver $\mu \otimes \nu$ ikke mening.
+    - Hvorfor giver $\mu \otimes \nu$ kun mening hvis $\mu$ og $\nu$ er $\sigma$-endelige? Husk at vi konstruerer produktmålet ved en eksplicit formel, og vi har her brug for at f.eks. funktionen $x \mapsto \mu(U_x)$ er målelig. Vi viser dette vha. Dynkins lemma, så vi skal vise at systemet af mængder $U$ så $x \mapsto \mu(U_x)$ er målelig, er et $\delta$-system. Altså skal vi kunne tage differencen $U \setminus V$ af to mængder, hvilket betyder at vi skal betragte $\mu(U_x) - \mu(V_x)$. Men så skal $\mu$ være endeligt! Først *derefter* udvider vi resultatet til $\sigma$-endelige mål.
+    - Hvorfor er kontinuerte funktioner målelige? Fordi kontinuitet og målelighed begge har at gøre med urbilleder, og fordi Borelalgebraen netop er frembragt af de åbne mængder.
+    - Hvis $g \geq 0$ er integrabel og $\lvert f \rvert \leq g$, hvorfor er $f$ så integrabel? Fordi integralet er voksende.
+    - Hvorfor kan vi differentiere ind under integraltegnet? Pga. domineret konvergens.
+- Bare brug Fubinis sætning og spring over Tonelli, og vend eventuelt tilbage til Tonelli hvis der er tid. Nævn selvfølgelig at du gør dette.
+- Det er helt i orden at udelade beviser (og præcise formuleringer) af lemmaer og andre hjælperesultater. Bare nævn at du bruger dem. (De er strengt taget pensum, men du vil formentlig ikke blive spurgt ind til dem.)
+
+
+### Vigtige resultater
 
 TODO
 
@@ -325,9 +339,9 @@ TODO
 
 6. **Konvergens i $\mu$-$p$-middel.** Det centrale resultat er selvfølgelig Fischers fuldstændighedssætning (Hovedsætning 7.4.7), men meget af det tekniske arbejde udføres i Lemma 7.4.6. Den interessante implikation i Hovedsætning 7.4.7 er naturligvis (i) $\Rightarrow$ (ii), så man kan evt. nøjes med at vise denne samt (dele af) Lemma 7.4.6. Man bør selvfølgelig også definere det relevante konvergensbegreb og tilhørende Cauchyfølger. Derudover kan man nævne at $\mathcal{L}^p(\mu)$ også er fuldstændigt for $p \in (0,1)$, men at man i dette tilfælde ikke har adgang til en norm, og derfor bliver beviset en smule anderledes (jf. Bemærkning 7.4.9). (Vi bemærker at man i kurset *Videregående sandsynlighedsteori* giver endnu et bevis for fuldstændigheden af $\mathcal{L}^p(\mu)$ gennem studiet af såkaldt *konvergens i mål*, og her gives endda ét bevis for alle $p \in (0,\infty)$.)
 
-7. **Hilbertrum og projektionssætningen.** TODO
+7. **Hilbertrum og projektionssætningen.** Indre produkter er velkendte fra kurset *Lineær algebra*, så undlad at bruge for meget tid på at definere disse. Men nævn gerne forskellen mellem *pseudo* indre produkter og "ægte" indre produkter. Ellers er fuldstændighed den centrale egenskab ved Hilbertrum. De vigtige resultater er Sætning 9.3.1, Hovedsætning 9.3.3 og Korollar 9.3.5.
 
-8. **Fouriertransformationen og inversionssætningen.** TODO
+8. **Fouriertransformationen og inversionssætningen.** Definér gerne Fouriertransformationen (for funktioner i $\mathcal{L}^1_\mathbb{C}(\lambda)$), ellers skal Hovedsætning 12.4.2 bevises, og der er nok ikke tid til meget andet.
 
 9. **Plancherels sætning.** TODO
 
