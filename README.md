@@ -250,7 +250,7 @@ I prioriteret rækkefølge:
 
 - 9.13(a-c)
 - 9.15
-- US1
+- US Opgave 1
 - 10.1
 - 10.3
 
@@ -274,7 +274,7 @@ I prioriteret rækkefølge:
 - 12.2
 - 12.3
 - 12.4: Denne opgave viser specielt at den Fouriertransformerede af tætheden for Laplacefordelingen er tætheden for Cauchyfordelingen, og omvendt.
-- Opgave A
+- US Opgave A
 
 
 [Løsningsforslag](Noter/uge13.pdf)
@@ -289,7 +289,12 @@ Ikke flere afleveringer! Alle besvarelser skal være afleveret og godkendt inden
 
 ### Opgaver
 
-TODO
+- 12.5: Jo mere differentiabel en funktion er, jo pænere opfører dens Fouriertransformerede sig.
+- 13.2: En rimelig abstrakt opgave. *Vink*: Se på fordelingsfunktionen for $\mathsf{X}$ og overvej hvordan den kan opføre sig.
+- 12.7: *Vink til del (b)*: Benyt at diverse funktioner er lige til at antage $x,y \geq 0$, og husk at $2(x \vee y) = \lvert x-y \rvert + x+y$.
+- 13.4
+- 13.5: Del (b) viser specielt at det sandsynlighedsfelt som en stokatisk variabel er defineret på, ikke har så meget at sige.
+- US Opgave A
 
 [Løsningsforslag](Noter/uge14.pdf) (uploades efter TØ)
 
