@@ -325,7 +325,7 @@ TODO
 #### Kapitel 1: $\sigma$-algebra og mål
 
 - Sætning 1.1.6 og Sætning 1.1.7: Enhver delmængde $\mathcal{D}$ af $\mathcal{P}(X)$ frembringer en $\sigma$-algebra $\sigma(\mathcal{D})$, og dette er den *mindste* $\sigma$-algebra som indeholder $\mathcal{D}$. Dette giver $\sigma(\mathcal{D})$ en række egenskaber som minder om egenskaberne ved f.eks. det lineære span eller supremum/infimum af en mængde (se f.eks. Sætning 1.1.11). Bemærk at $\delta$-systemer opfører sig tilsvarende, jf. Sætning 2.1.5. Disse er resultater som man ikke bør huske ordret, men man i stedet bør gøre sit bedste for at forstå.
-- Sætning 1.2.4 og Korollar 1.2.6: Borelalgebraen $\mathcal{B}(\mathbb{R}^d)$ er tælleligt frembragt og har flere vigtige frembringersystemer. Frembringersystemet i (1.15) er f.eks. vigtigt i sandsynlighedsteori, idet det fører til at fordelingen af en stokatisk variabel er entydigt bestemt af dens fordelingsfunktion (jf. 13.1.5). Beviserne for disse resultater er tekniske, og I vil formentlig ikke blive spurgt ind til dem til eksamen.
+- Sætning 1.2.4 og Korollar 1.2.6: Borelalgebraen $\mathcal{B}(\mathbb{R}^d)$ er tælleligt frembragt og har flere vigtige frembringersystemer. Frembringersystemet i (1.15) er f.eks. vigtigt i sandsynlighedsteori, idet det fører til at fordelingen af en stokatisk variabel er entydigt bestemt af sin fordelingsfunktion (jf. 13.1.5). Beviserne for disse resultater er tekniske, og I vil formentlig ikke blive spurgt ind til dem til eksamen.
 - Sætning 1.3.4: Husk især del (v) og (vi) ("kontinuiteten" af mål).
 
 #### Kapitel 2: Dynkins lemma og entydighed af mål
@@ -414,7 +414,7 @@ De fleste resultater i dette kapitel er mere eller mindre oplagte generalisering
 
 7. **Hilbertrum og projektionssætningen.** Indre produkter er velkendte fra kurset *Lineær algebra*, så undlad at bruge for meget tid på at definere disse. Men nævn gerne forskellen mellem *pseudo* indre produkter og "ægte" indre produkter. Ellers er fuldstændighed den centrale egenskab ved Hilbertrum. De vigtige resultater er Sætning 9.3.1, Hovedsætning 9.3.3 og Korollar 9.3.5.
 
-8. **Fouriertransformationen og inversionssætningen.** Definér gerne Fouriertransformationen (for funktioner i $\mathcal{L}^1_\mathbb{C}(\lambda)$), ellers skal Hovedsætning 12.4.2 bevises, og der er nok ikke tid til meget andet.
+8. **Fouriertransformationen og inversionssætningen.** Definér gerne Fouriertransformationen (for funktioner i $\mathcal{L}^1_\mathbb{C}(\lambda)$), ellers skal Hovedsætning 12.4.2 bevises, og der er nok ikke tid til meget andet. Men husk også Opgave 12.3.
 
 9. **Plancherels sætning.** TODO
 
