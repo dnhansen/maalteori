@@ -1,0 +1,329 @@
+\newcommand{\doctitle}{Uge 14}
+\newcommand{\docauthor}{Danny Nygård Hansen}
+
+\documentclass[a4paper, 11pt, article, danish, oneside]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage[autostyle, danish=guillemets]{csquotes}
+
+\usepackage[final]{microtype}
+\frenchspacing
+\raggedbottom
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage[largesmallcaps]{kpfonts}
+\linespread{1.06}
+\DeclareMathAlphabet\mathfrak{U}{euf}{m}{n}
+\SetMathAlphabet\mathfrak{bold}{U}{euf}{b}{n}
+\usepackage{inconsolata}
+
+\usepackage{hyperref}
+\hypersetup{%
+	pdftitle=\doctitle,
+	pdfauthor={\docauthor},
+    hidelinks,
+}
+
+\usepackage{enumitem}
+\setenumerate[0]{label=\normalfont(\arabic*)}
+\setlist{
+	listparindent=\parindent,
+	parsep=0pt,
+}
+\usepackage{array}
+
+\title{\doctitle}
+\author{\docauthor}
+
+\newcommand{\overbar}[3]{\mkern #1mu\overline{\mkern-#1mu#3\mkern-#2mu}\mkern #2mu}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\extreals}{\overbar{1.5}{1.5}{\reals}}
+\newcommand{\complex}{\mathbb{C}}
+
+
+\usepackage{pgffor}
+
+\newcommand{\rvar}[1]{\mathsf{#1}}
+
+\foreach \x in {A,...,Z}{%
+    \expandafter\xdef\csname cal\x\endcsname{\noexpand\mathcal{\x}}
+    \expandafter\xdef\csname frak\x\endcsname{\noexpand\mathfrak{\x}}
+    \expandafter\xdef\csname rand\x\endcsname{\noexpand\rvar{\x}}
+}
+
+
+\usepackage{etoolbox}
+\newcommand{\blank}{\mathrel{\;\cdot\;}}
+\newcommand{\blankifempty}[1]{\ifstrempty{#1}{\blank}{#1}}
+\DeclarePairedDelimiter{\auxdelimlvert}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\auxdelimlVert}{\lVert}{\rVert}
+\DeclarePairedDelimiterX{\auxdelimanglescomma}[2]{\langle}{\rangle}{#1,#2}
+\newcommand{\abs}[2][]{\auxdelimlvert[#1]{\blankifempty{#2}}}
+\newcommand{\norm}[2][]{\auxdelimlVert[#1]{\blankifempty{#2}}}
+\newcommand{\inner}[2]{\auxdelimanglescomma{\blankifempty{#1}}{\blankifempty{#2}}}
+
+
+\DeclarePairedDelimiter{\auxdelimparen}{(}{)}
+\DeclarePairedDelimiterX{\auxdelimparencomma}[2]{(}{)}{#1,#2}
+\DeclarePairedDelimiter{\auxdelimbracket}{[}{]}
+\DeclarePairedDelimiterX{\auxdelimbracketcomma}[2]{[}{]}{#1,#2}
+\newcommand{\powerset}[2][]{\calP\auxdelimparen[#1]{#2}}
+\newcommand{\borel}[2][]{\calB\auxdelimparen[#1]{#2}}
+\newcommand{\meas}[2][]{\calM\auxdelimparen[#1]{#2}}
+\newcommand{\measC}[2][]{\calM_\complex\auxdelimparen[#1]{#2}}
+\newcommand{\measpos}[2][]{\meas[#1]{#2}^+}
+\newcommand{\measbound}[2][]{\calM_b\auxdelimparen[#1]{#2}}
+\newcommand{\measboundpos}[2][]{\measbound[#1]{#2}^+}
+
+
+\newcommand{\extmeas}[2][]{\overbar{4.5}{0.5}{\calM}\auxdelimparen[#1]{#2}}
+\newcommand{\extmeaspos}[2][]{\extmeas[#1]{#2}^+}
+\newcommand{\simplemeas}[2][]{\calS\!\calM\auxdelimparen[#1]{#2}}
+\newcommand{\simplemeaspos}[2][]{\simplemeas[#1]{#2}^+}
+\newcommand{\sigmaalg}[2][]{\sigma\auxdelimparen[#1]{#2}}
+\newcommand{\deltasys}[2][]{\delta\auxdelimparen[#1]{#2}}
+
+\newcommand{\expval}[2][]{\mathbb{E}\auxdelimbracket[#1]{#2}}
+\newcommand{\var}[2][]{\operatorname{Var}\auxdelimbracket[#1]{#2}}
+\newcommand{\cov}[3][]{\operatorname{Cov}\auxdelimbracketcomma[#1]{#2}{#3}}
+
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\dif}{\mathop{}\!\mathrm{d}}
+\DeclareMathOperator{\id}{id}
+\newcommand{\indicator}[1]{\mathbf{1}_{#1}}
+
+% Lattice operations
+\newcommand{\meet}{\land}
+\newcommand{\join}{\lor}
+
+\DeclareMathOperator*{\smallbigvee}{\textstyle\bigvee}
+\DeclareMathOperator*{\bigjoin}{\mathchoice
+    {\smallbigvee}%
+    {\bigvee}%
+    {\bigvee}%
+    {\bigvee}%
+}
+\DeclareMathOperator*{\smallbigwedge}{\textstyle\bigwedge}
+\DeclareMathOperator*{\bigmeet}{\mathchoice
+    {\smallbigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+    {\bigwedge}%
+}
+
+
+
+\newcommand*\union\cup
+\newcommand*\intersect\cap
+
+\DeclareMathOperator*{\smallbigcup}{\textstyle\bigcup}
+\DeclareMathOperator*{\bigunion}{\mathchoice
+    {\smallbigcup}%
+    {\bigcup}%
+    {\bigcup}%
+    {\bigcup}%
+}
+\DeclareMathOperator*{\smallbigcap}{\textstyle\bigcap}
+\DeclareMathOperator*{\bigintersect}{\mathchoice
+    {\smallbigcap}%
+    {\bigcap}%
+    {\bigcap}%
+    {\bigcap}%
+}
+
+
+\DeclarePairedDelimiterX{\set}[2]{\lbrace}{\rbrace}{#1\;\delimsize\vert\;#2}
+
+\newcommand{\defeq}{\coloneqq}
+\newcommand{\eqdef}{\eqqcolon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+\DeclareMathOperator{\e}{\mathrm{e}}
+
+\newcommand{\ball}[3][]{%
+    \ifstrempty{#1}%
+        {%
+            b\auxdelimparencomma{#2}{#3}%
+        }{%
+            b_{#1}\auxdelimparencomma{#2}{#3}%
+        }%
+}
+
+\newcommand{\converges}[1]{\xrightarrow[#1]{}}
+\DeclareMathOperator{\supp}{supp}
+\let\oldvec\vec
+\renewcommand{\vec}[1]{\underline{#1}}
+\newcommand{\Tr}[1][]{%
+    \ifstrempty{#1}%
+        {%
+            \operatorname{Tr}%
+        }{%
+            \operatorname{Tr}_{#1}%
+        }%
+}
+
+
+\usepackage{listofitems}
+\setsepchar{,}
+
+\makeatletter
+\newcommand{\mat@dims}[1]{%
+    \readlist*\@dims{#1}%
+    \ifnum \@dimslen=1
+        \def\@dimsout{\@dims[1]}%
+    \else
+        \def\@dimsout{\@dims[1], \@dims[2]}%
+    \fi
+    \@dimsout
+}
+
+
+\newcommand{\matgroup}[3]{\mathrm{#1}_{#2}(#3)}
+\newcommand{\matGL}[2]{\matgroup{GL}{#1}{#2}}
+\newcommand{\trans}{^{\top}}
+\newcommand{\mat}[2]{M_{\mat@dims{#1}}(#2)}
+
+\makeatother
+
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\clSpan}{\overbar{0.5}{1.5}{span}}
+
+\newcommand\inv{^{-1}}
+\newcommand{\preim}[2][]{^{-1}\auxdelimparen[#1]{#2}}
+
+\newcommand{\dsupp}[2][]{\mathrm{Sp}_d\auxdelimparen[#1]{#2}}
+
+\usepackage[amsmath,thmmarks,hyperref]{ntheorem}
+\usepackage{bbding}
+
+\newcommand{\theorembullet}{{\footnotesize\textbullet}}
+\newcommand{\pencilsymbol}{\raisebox{-2pt}{\normalfont\PencilLeft}}
+\makeatletter
+\newtheoremstyle{changedotcustomnumber}%
+    {}%
+    {\item[\hskip\labelsep \theorem@headerfont ##3~~\theorembullet~~##1\theorem@separator]}
+\newtheoremstyle{changedotbreakcustomnumber}%
+    {}%
+    {\item[\rlap{\vbox{\hbox{\hskip\labelsep \theorem@headerfont
+            ##3~~\theorembullet~~##1\theorem@separator}\hbox{\strut}}}]}
+\makeatother
+
+\theorembodyfont{\normalfont}
+\theoremseparator{~~}
+\theoremsymbol{\ensuremath{\blacksquare}}
+\theoremstyle{changedotcustomnumber}
+\newtheorem{opgave}{\pencilsymbol}
+\theoremstyle{changedotbreakcustomnumber}
+\newtheorem{opgavebreak}{\pencilsymbol}
+
+\newlist{solutionsec}{enumerate}{1}
+\setlist[solutionsec]{leftmargin=0pt, parsep=0pt, listparindent=\parindent, label=(\alph*), labelsep=0pt, labelwidth=20pt, itemindent=20pt, align=left, itemsep=.5\baselineskip}
+
+
+\begin{document}
+
+\maketitle
+
+% • 12.5, 13.2, 12.7.
+% • 13.4, 13.5.
+
+\begin{opgavebreak}[12.5]
+\begin{solutionsec}
+    \item Bemærk at $f',f'' \in C_c(\reals,\complex) \subseteq \calL^1_\complex(\lambda)$, og at
+    %
+    \begin{equation*}
+        \widehat{f''}(t)
+            = \iu t \widehat{f'}(t)
+            = - t^2 \hat{f}(t)
+    \end{equation*}
+    %
+    ved Sætning~12.1.6(ii). Men $\widehat{f''}$ er begrænset ved Sætning~12.1.3(i).
+
+    \item Da $\hat{f}$ er begrænset, er funktionen $t \mapsto (t^2+1) \hat{f}(t)$ også begrænset, sig af $R > 0$. Men så er
+    %
+    \begin{equation*}
+        \abs{\hat{f}(t)}
+            \leq \frac{R}{t^2+1},
+    \end{equation*}
+    %
+    og funktionen (af $t$) på højre side ligger i $\calL^1_\complex(\lambda)$ (sæt f.eks. $\sigma = 1$ i Opgave~12.4(b)). Det ønskede følger da af Opgave~12.3 da $f$ er kontinuert.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgave}[13.2]
+    Sæt $c = \inf \{F_\randX = 1\}$ og bemærk at $c \in \reals$, da der både må findes $t \in \reals$ så $P(\randX \leq t) = 0$ og $P(\randX \leq t) = 1$. Da $F_\randX$ er højrekontinuert, er $F_\randX(c) = 1$, men omvendt er $F_\randX(t) = 0$ for $t < c$. Altså er $F_\randX$ også fordelingsfunktionen for Diracmålet $\delta_c$, så $P_\randX = \delta_c$ ved 13.1.5.
+\end{opgave}
+
+
+\begin{opgavebreak}[12.7]
+\begin{solutionsec}
+    \item Oplagt.
+
+    \item Bemærk at
+    %
+    \begin{equation*}
+        H_1 * u(2x)
+            = \int_\reals \e^{-\abs{2x-y}} \e^{-\abs{y}} \,\lambda(\dif y)
+            = \int_\reals \e^{-(\abs{x-y}+\abs{x+y})} \,\lambda(\dif y).
+    \end{equation*}
+    %
+    Altså er $H_1 * u$ lige, så vi kan antage $x \geq 0$. Integranden er også lige i $y$ for ethvert $x$, så for $x \geq 0$ er
+    %
+    \begin{align*}
+        H_1 * u(2x)
+            &= 2\int_0^\infty \e^{-(\abs{x-y}+x+y)} \,\lambda(\dif y)
+             = 2\int_0^\infty \e^{-2(x \join y)} \,\lambda(\dif y) \\
+            &= 2\int_0^x \e^{-2x} \,\lambda(\dif y) + 2\int_x^\infty \e^{-2y} \,\lambda(\dif y) \\
+            &= (2x+1) \e^{-2x}.
+    \end{align*}
+    %
+    Dermed er $H_1 * u(x) = (x+1)\e^{-x}$ for $x \geq 0$.
+
+    \item Erstat $u$ med $u \indicator{(-R,R)}$ for $R > 0$. (Bemærk at differentiation er defineret lokalt. Sammenlign Opgave~5.24(e).)
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[13.4]
+\begin{solutionsec}
+    \item Betragt $(\reals,\borel{\reals},\mu_1)$ og lad $\randX_1$ være identitetsfunktionen på $\reals$.
+
+    \item Sæt $\mu = \mu_1 \otimes \cdots \otimes \mu_n$ og betragt produktrummet $(\reals^n, \borel{\reals^n}, \mu)$, og lad $\randX_j$ være den $j$'te koordinatprojektion $(x_1, \ldots, x_n) \mapsto x_j$. For uafhængighed, bemærk at $(\randX_1, \ldots, \randX_n)$ blot er identitetsfunktionen på $\reals^n$, så dens fordeling er $\mu$. Benyt da Sætning~13.5.3.
+
+    Vi bemærker at dette specielt viser at hvis $\randX$ og $\randY$ er stokastiske variable, da findes et sandsynlighedsfelt $(\Omega,\calF,P)$ hvorpå der findes uafhængige \enquote{kopier} af $\randX$ og $\randY$, dvs. stokatiske variable $\tilde{\randX}$ og $\tilde{\randY}$ med $P_\randX = P_{\tilde{\randX}}$ og $P_\randY = P_{\tilde{\randY}}$. Hvis $\randX$ og $\randY$ er defineret på samme sandsynlighedsfelt, da kan man altså altid finde \emph{uafhængige} kopier deraf. Dette er især nyttigt idet vi i sandsynlighedsteori ofte kun er interesseret i \emph{fordelingen} af stokatiske variable, jf. eksempelvis Opgave~13.5.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\begin{opgavebreak}[13.5]
+\begin{solutionsec}
+    \item Oplagt.
+
+    \item Benyt vinket og lad f.eks. $\randX = \indicator{[0,1/2]}$ og $\randY = \indicator{[1/2,1]}$.
+
+    \item Bemærk at
+    %
+    \begin{equation*}
+        \expval{\abs{\randX}^p}
+            = \int_\Omega \abs{\randX}^p \dif P
+            = \int_\reals \abs{x}^p P_\randX(x)
+            = \int_\reals \abs{y}^p P_\randY(y)
+            = \int_\Omega \abs{\randY}^p \dif P
+            = \expval{\abs{\randY}^p}.
+    \end{equation*}
+
+    \item Udeladt.
+\end{solutionsec}
+\end{opgavebreak}
+
+
+\end{document}

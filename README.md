@@ -296,7 +296,7 @@ Ikke flere afleveringer! Alle besvarelser skal være afleveret og godkendt inden
 - 13.5: Del (b) viser specielt at det sandsynlighedsfelt som en stokatisk variabel er defineret på, ikke har så meget at sige.
 - US Opgave A
 
-[Løsningsforslag](Noter/uge14.pdf) (uploades efter TØ)
+[Løsningsforslag](Noter/uge14.pdf)
 
 
 ### Andre bemærkninger
@@ -359,11 +359,35 @@ Ikke pensum
 
 #### Kapitel 6: Produktmål
 
+- Sætning 6.1.3, Sætning 6.1.4 og Bemærkning 6.1.5: Karakterisationen af produkt-$\sigma$-algebraen som den mindste $\sigma$-algebra der gør projektionsafbildningerne målelige, er ekstremt vigtig. (For dem der kender til topologi: Produkttopologien har præcis den samme egenskab, idet vi erstatter målelighed med kontinuitet.) Man kan vise at egenskaben i Sætning 6.1.4(i) faktisk karakteriserer produkt-$\sigma$-algebraen.
+- Lemma 6.3.1, Lemma 6.3.2 og Hovedsætning 6.3.3: Disse omtales [nedenfor](#spørgsmål).
+- Sætning 6.4.1 og Sætning 6.4.4: Tonellis og Fubinis sætninger er naturligvis meget vigtige. Detaljerne i beviserne er knap så vigtige, men bemærk at beviset for Tonellis sætning er et eksempel på "standardbeviset", og at komplikationerne i Fubinis sætning blot er til for at sikre at det itererede integral er veldefineret.
+
 #### Kapitel 7: Integraluligheder og $\mathcal{L}^p$-rum
+
+- Lemma 7.1.2 til og med Korollar 7.1.6: Disse resultater er relativt tekniske (men måske velkendte fra *Konveks optimering*?), men forhåbentlig er deres geometriske indhold intuitivt.
+- Sætning 7.1.7: Vi har ikke brugt Jensens ulighed så meget i kurset, men ud over i opgaver kommer den i spil i beviset for Sætning 12.4.1 (andre forfattere, f.eks. Folland, bruger i stedet den såkaldte Minkowskis ulighed for integraler til at give et bevis for et analogt resultat, jf. Follands bog [Fo] 6.19 og 8.14, og se [disse noter](https://github.com/dnhansen/folland-real-analysis) for et mere elementært bevis for Minkowskis ulighed for integraler), og den spiller en større rolle i *Videregående sandsynlighedsteori*.
+- Lemma 7.2.1 til og med Sætning 7.2.4: Disse uligheder (måske med undtagelse af Youngs ulighed) er helt fundamentale og bør sidde på rygraden. I *Videregående sandsynlighedsteori* skal I se en vigtig anvendelse af Markovs ulighed, idet den udtrykker styrkeforholdet mellem konvergens i $\mu$-$p$-middel og såkaldt *konvergens i $\mu$-mål*.
+- Sætning 7.2.6: Borel-Cantellis første lemma bruges nærmest kun i beviset for store tals lov (Sætning 13.6.1).
+- Sætning 7.3.2: Uligheden (7.14) er meget nyttig og værd at huske på. Del (ii) af denne sætning må gerne komme meget naturligt.
+- Sætning 7.3.5: Minkowskis ulighed er selv sagt meget vigtig, selvom beviset er en smule træls.
+- Lemma 7.4.4: Bemærk især hvor nyttigt det er at have adgang til limes superior, så vi ikke behøver bekymre os om hvorvidt følgen er konvergent. Bemærk også at uligheden (7.14) igen er nyttig.
+- Lemma 7.4.6, Hovedsætning 7.4.7 og Bemærkning 7.4.9: Omtales [nedenfor](#spørgsmål). Detaljerne i bemærkningen er formentlig ikke så vigtige.
+- Sætning 7.5.2 og Korollar 7.5.4: Disse resultater er naturligvis vigtige, men beviserne handler blot om at tjekke at alting virker som det skal når vi går fra $\mathcal{L}^p(\mu)$ til $L^p(\mu)$.
+- Sætning 7.6.4: Så vidt jeg ved er beviset for dette resultat ikke pensum, men selve resultatet er meget vigtigt.
 
 #### Kapitel 8: Målelighed og integration af komplekse funktioner
 
+De fleste resultater i dette kapitel er mere eller mindre oplagte generaliseringer af resultater fra tidligere kapitler.
+
 #### Kapitel 9: Hilbertrum
+
+- Sætning 9.1.4 og Sætning 9.1.5: Disse resultater er naturligvis vigtige, men de har ikke så meget med mål- og integralteori at gøre. Jeg kan personligt bedre lide beviset for Cauchy-Schwarz' ulighed som Jesper Funch giver i sine noter til kurset *Lineær algebra*.
+- Lemma 9.1.9: Kontinuitet af (pseudo) indre produkter og (semi)normer. Et ekstremt vigtigt resultat som gerne må føles som en ligefrem anvendelse af Cauchy-Schwartz' ulighed.
+- Sætning 9.2.3: Her er del (i) og (ii) velkendte fra *Lineær algebra*.
+- Sætning 9.3.1, Hovedsætning 9.3.3 og Korollar 9.3.5: Disse omtales [nedenfor](#spørgsmål).
+- Lemma 9.4.4 til og med Korollar 9.4.9: Beviserne for disse resultater er formentligt ikke super vigtige (eller svære), men det er meget vigtigt at have godt styr på de omtalte begreber og hvordan de opfører sig.
+- Hovedsætning 9.5.3 og Korollar 9.5.4: Hovedsætningen omtales somme sider som *Riesz' repræsentationssætning* (bemærk at der er mindst tre sætninger der bærer dette navn, én af de andre to vises i *Videregående analyse*) eller *Riesz-Fréchets sætning*.
 
 #### Kapitel 10: Tætheder og absolut kontinuitet
 
