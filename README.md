@@ -316,6 +316,12 @@ TODO
     - Hvorfor er kontinuerte funktioner målelige? Fordi kontinuitet og målelighed begge har at gøre med urbilleder, og fordi Borelalgebraen netop er frembragt af de åbne mængder.
     - Hvis $g \geq 0$ er integrabel og $\lvert f \rvert \leq g$, hvorfor er $f$ så integrabel? Fordi integralet er voksende.
     - Hvorfor kan vi differentiere ind under integraltegnet? Pga. domineret konvergens.
+- Strengt taget er (mere eller mindre) hele bogen pensum, men det er naturligvis ikke nødvendigt at kunne det hele, ej heller for at få topkarakter. I vil formentlig aldrig blive spurgt ind til de fleste beviser, så hvis I ikke har tid til at lære alle beviser udenad (hvilket I ikke har), så fokuser hellere på de fremlæggelser I har forberedt på forhånd, og de opgaver I kan blive spurgt ind til. Derudover er det også vigtigere at have en overordnet forståelse for forløbet igennem kurset end at kunne huske detaljerne i alle beviser. Dette betyder at kunne huske alle definitioner og hvordan alle begreberne "passer ind" i teorien. Vi giver nogle eksempler:
+    - Hvorfor er $\sigma$-endelige mål vigtige? Fordi vi f.eks. kan bevise entydighedsresultater derfor, vi kan konstruere produkter af $\sigma$-endelige mål, og vi har adgang til Tonelli og Fubinis sætninger.
+    - Hvad kan man bruge billedmål til? Vi har f.eks. brugt dem i Opgave 11.4 til at beregne det Gaussiske integral, og vi bruger dem hele tiden i sandsynlighedsteori (jf. fordelinger af stokastiske variable).
+    - Hvorfor er mål med tæthed vigtige? Ud over den vigtige anvendelse i Opgave 11.4, spiller de en central rolle i sandsynlighedsteori, da de netop karaktereriserer de to vigtige klasser af stokatiske variable som vi har studeret, nemlig diskrete og absolut kontinuerte stokastiske variable.
+    - Hvorfor studerer vi også $\delta$-systemer og ikke kun $\sigma$-algebraer? Fordi det ofte er betydeligt lettere at vise at noget er et $\delta$-system, og vi kan derefter ofte bruge Dynkins lemma til at vise at det pågældende mængdesystem også er en $\sigma$-algebra.
+    - Hvorfor er Fouriertransformationen vigtig? Eksempelvis fordi den tillader os at lave differentiation om til multiplikation, og den er derfor et vigtigt redskab til at løse differentialligninger.
 - Bare brug Fubinis sætning og spring over Tonelli, og vend eventuelt tilbage til Tonelli hvis der er tid. Nævn selvfølgelig at du gør dette.
 - Det er helt i orden at udelade beviser (og præcise formuleringer) af lemmaer og andre hjælperesultater. Bare nævn at du bruger dem. (De er strengt taget pensum, men du vil formentlig ikke blive spurgt ind til dem.)
 
@@ -368,7 +374,7 @@ Ikke pensum
 - Lemma 7.1.2 til og med Korollar 7.1.6: Disse resultater er relativt tekniske (men måske velkendte fra *Konveks optimering*?), men forhåbentlig er deres geometriske indhold intuitivt.
 - Sætning 7.1.7: Vi har ikke brugt Jensens ulighed så meget i kurset, men ud over i opgaver kommer den i spil i beviset for Sætning 12.4.1 (andre forfattere, f.eks. Folland, bruger i stedet den såkaldte Minkowskis ulighed for integraler til at give et bevis for et analogt resultat, jf. Follands bog [Fo] 6.19 og 8.14, og se [disse noter](https://github.com/dnhansen/folland-real-analysis) for et mere elementært bevis for Minkowskis ulighed for integraler), og den spiller en større rolle i *Videregående sandsynlighedsteori*.
 - Lemma 7.2.1 til og med Sætning 7.2.4: Disse uligheder (måske med undtagelse af Youngs ulighed) er helt fundamentale og bør sidde på rygraden. I *Videregående sandsynlighedsteori* skal I se en vigtig anvendelse af Markovs ulighed, idet den udtrykker styrkeforholdet mellem konvergens i $\mu$-$p$-middel og såkaldt *konvergens i $\mu$-mål*.
-- Sætning 7.2.6: Borel-Cantellis første lemma bruges nærmest kun i beviset for store tals lov (Sætning 13.6.1).
+- Sætning 7.2.6: Borel-Cantellis første lemma bruges nærmest kun i beviset for store tals lov (Sætning 13.6.1). Bemærk at mængden $U$ netop er limes superior af følgen $(F_n)$, og at resultatet nærmest ville være oplagt hvis vi erstattede $U$ med limes *inferior* af $(F_n)$ (jf. Opgave 1.9(a)).
 - Sætning 7.3.2: Uligheden (7.14) er meget nyttig og værd at huske på. Del (ii) af denne sætning må gerne komme meget naturligt.
 - Sætning 7.3.5: Minkowskis ulighed er selv sagt meget vigtig, selvom beviset er en smule træls.
 - Lemma 7.4.4: Bemærk især hvor nyttigt det er at have adgang til limes superior, så vi ikke behøver bekymre os om hvorvidt følgen er konvergent. Bemærk også at uligheden (7.14) igen er nyttig.
@@ -391,9 +397,28 @@ De fleste resultater i dette kapitel er mere eller mindre oplagte generalisering
 
 #### Kapitel 10: Tætheder og absolut kontinuitet
 
+- Lemma 10.1.1: Det skulle gerne være rimelig ligetil at vise at $g \cdot \mu$ er et mål.
+- Sætning 10.1.4: Helt central. Læg mærke til at beviset går gennem Hovedsætning 5.2.11 for positive funktioner, og at resten af beviset bare handler om at tjekke at alting virker som det skal for reelle og komplekse funktioner.
+- Sætning 10.2.1, Korollar 10.2.2 og Korollar 10.2.3: Meget vigtige resultater. Størstedelen af arbejdet består naturligvis i at vise sætningen. Bemærk også at Korollar 10.2.3 ikke gælder hvis vi erstatter lighedstegnet med en ulighed (som i Sætning 10.2.1): For selvom to endelige mål $\mu$ og $\nu$ med $\mu(X) = \nu(X)$ stemmer overens på et $\delta$-system, så gælder uligheden $\mu \leq \nu$ *ikke* generelt på et $\delta$-system. (Man kan vise at mængden hvorpå $\mu \leq \nu$ udgør en såkaldt *monoton klasse*. Ligesom et $\cap$-stabilt $\delta$-system er en $\sigma$-algebra, er en mængdealgebra en $\sigma$-algebra hvis den også er en monoton klasse. En analog til Dynkins lemma siger at den monotone klasse frembragt af en mængdealgebra også er en mængdealgebra. Hvis man da ved at $\mu \leq \nu$ gælder på en mængdealgebra, så gælder det også på den frembragte $\sigma$-algebra.)
+
 #### Kapitel 11: Transformation
 
+- Lemma 11.1.1: Ligesom Lemma 10.1.1 skal dette gerne være ligetil at bevise.
+- Sætning 11.1.4: Den lille transformationssætning. Bemærk ligheden med Sætning 10.1.4, både i sætningens formulering og i dens bevis.
+- Sætning 11.2.3 og Lemma 11.2.4: Jeg ved ikke hvor meget af delafsnit 11.2 der er pensum, men disse resultater er i hvert fald vigtige, og deres beviser skulle gerne være naturlige.
+- Hovedsætning 11.4.1 og Korollar 11.4.2: Beviset for transformationssætningen af formentlig ikke pensum, men det er et yderst vigtigt resultat. (Steens bevis for transformationssætningen er meget langt. Et kortere og mere direkte bevis gives i Follands bog [Fo].)
+
 #### Kapitel 12: Fouriertransformationen
+
+- Sætning 12.1.3: Fouriertransformerede funktioner er begrænsede og uniformt kontinuerte. Beviset for del (i) er næsten oplagt, og bemærk i hvert fald at beviset for (ii) går gennem domineret konvergens (naturligvis).
+- Sætning 12.1.4 og Sætning 12.1.6: Jeg kan aldrig huske hvilke koefficienter der dukker op hvor, og hvilke fortegn de har, men heldigvis er det hurtigt at udlede formlerne. Det eneste tekniske er at vise at $f(N)$ går mod $0$ for $N \to \pm \infty$.
+- Sætning 12.2.3 og Sætning 12.2.4: Beviserne for disse resultater forløber ligeledes på noget nær den eneste tænkelige måde. Faktoren $\sqrt{2\pi}$ i Sætning 12.2.4 er træls, og jeg kan aldrig huske den (især fordi der er flere forskellige måder at definere Fouriertransformationen på, og faktoren afhænger deraf). En måde at huske den på er at huske at der i både $\widehat{f*g}$, $\hat{f}$ og $\hat{g}$ er en faktor $1/\sqrt{2\pi}$ uden for integralet, så der skal en faktor $\sqrt{2\pi}$ til for at kompensere for dette.
+- Sætning 12.2.5: Steens beviser for del (i) og (ii) er desværre meget tekniske, især del (ii), men I bliver forhåbentlig ikke stillet til regnskab for dem til eksamen. Men både (ii) og (iii) er helt fundamentale egenskaber ved foldning. (Del (ii) gælder i større generalitet, idet $g * h$ er "mindst lige så glat" som den mest glatte af $g$ og $h$. I del (iii) kan man faktisk erstatte $\varphi_\sigma$ med mere generelle familier af funktioner, såkaldte *approksimative identiteter*, hvilket løst sagt er en familie af funktioner $h_\sigma$ der afhænger af en parameter $\sigma > 0$, hvor integralet af alle $h_\sigma$ er $1$, og hvor $h_\sigma$ bliver mere og mere koncentreret omkring $0$ når $\sigma \downarrow 0$.)
+- Sætning 12.3.1 og Sætning 12.3.2: Beviset for Sætning 12.3.1 virker umiddelbart mere teknisk end det er, fordi Steen insisterer på eksplicit at indføre størrelsen $\epsilon (2R+2)^{-1/p}$. Ellers minder argumentet om mange andre analyseargumenter, idet vi først viser at resultatet gælder for kontinuerte funktioner og derefter approksimerer mere generelle funktioner med kontinuerte funktioner. I beviset for Sætning 12.3.2 får vi den gode idé at skrive $-1$ som $e^{-i\pi}$. Bemærk at vi ikke rigtig bruger Riemann-Lebesgues lemma til noget, men det er trods dette et vigtigt resultat som I i hvert fald bør huske på.
+- Sætning 12.4.1: Bemærk at dette er en slags $\mathcal{L}^p$-analog til Sætning 12.2.5(iii), og denne anvendes da også i beviset. Omtales yderligere [nedenfor](#spørgsmål).
+- Hovedsætning 12.4.2 og Korollar 12.4.4: Omtales [nedenfor](#spørgsmål).
+- Sætning 12.5.1 og Lemma 12.5.2: Disse er tekniske resultater, og deres primære rolle er som hjælperesultater til beviset for Plancherels sætning. I bliver forhåbentlig ikke spurgt ind til beviserne.
+- Hovedsætning 12.5.3: Omtales [nedenfor](#spørgsmål).
 
 #### Kapitel 13: Grundlæggende begreber i sandsynlighedsteori
 
@@ -414,7 +439,7 @@ De fleste resultater i dette kapitel er mere eller mindre oplagte generalisering
 
 7. **Hilbertrum og projektionssætningen.** Indre produkter er velkendte fra kurset *Lineær algebra*, så undlad at bruge for meget tid på at definere disse. Men nævn gerne forskellen mellem *pseudo* indre produkter og "ægte" indre produkter. Ellers er fuldstændighed den centrale egenskab ved Hilbertrum. De vigtige resultater er Sætning 9.3.1, Hovedsætning 9.3.3 og Korollar 9.3.5.
 
-8. **Fouriertransformationen og inversionssætningen.** Definér gerne Fouriertransformationen (for funktioner i $\mathcal{L}^1_\mathbb{C}(\lambda)$), ellers skal Hovedsætning 12.4.2 bevises, og der er nok ikke tid til meget andet. Men husk også Opgave 12.3.
+8. **Fouriertransformationen og inversionssætningen.** Definér gerne Fouriertransformationen (for funktioner i $\mathcal{L}^1_\mathbb{C}(\lambda)$), ellers skal Hovedsætning 12.4.2 bevises, og der er nok ikke tid til meget andet. Men husk også og nævn evt. Opgave 12.3 og Korollar 12.4.4.
 
 9. **Plancherels sætning.** TODO
 
