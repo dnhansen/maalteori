@@ -341,7 +341,7 @@ TODO
 
 #### Kapitel 3: Konstruktion af mål
 
-Ikke pensum
+TODO
 
 #### Kapitel 4: Målelige funktioner og afbildninger
 
