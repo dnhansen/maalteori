@@ -301,7 +301,14 @@ Ikke flere afleveringer! Alle besvarelser skal være afleveret og godkendt inden
 
 ### Andre bemærkninger
 
-TODO
+Ingen bemærkninger.
+
+
+## Spørgetime og instruktorøl
+
+Steen holder tilsyneladende en spørgetime d. 10. januar. Jeg holder desuden spørgetime d. 11. januar kl. 12-15 i det sædvanlige lokale.
+
+Efter en forhåbentlig veloverstået eksamen giver jeg instruktorøl d. 26. januar kl. 12-15 (eller hvor længe vi nu har lyst til at blive), også i det sædvanlige lokale.
 
 
 ## Eksamen
@@ -309,8 +316,8 @@ TODO
 ### Generelle råd
 
 - Memoriser *alle* definitioner i bogen.
-- Hvis der er noget du ikke forstår, så sørg for at du kan huske alle indgående definitioner. Du vil ikke at være i stand til at vise at noget er en ortonormalbasis, hvis du ikke kan huske hvad en ortonormalbasis er.
-- I stedet for at memorisere alle resultater, prøv at opnå en forståelse for *hvorfor* resultatet er sandt, eller hvad de vigtigste ingredienser i beviset er. Dette er ikke altid muligt, men det kan ofte lade sig gøre at forstå i hvert fald essensen af et bevis på denne måde. Vi giver nogle eksempler:
+- Hvis der er noget du ikke forstår, f.eks. en opgave eller en sætning, så sørg for at du kan huske alle indgående definitioner. Du vil ikke at være i stand til at vise at noget er en ortonormalbasis, hvis du ikke kan huske hvad en ortonormalbasis er.
+- I stedet for at memorisere alle resultater, prøv at opnå en forståelse for *hvorfor* resultatet er sandt, eller hvad de vigtigste ingredienser i beviset er. Så bliver det automatisk letter at huske, eller endda selv at "finde på". Dette er ikke altid muligt, men det kan ofte lade sig gøre at forstå i hvert fald essensen af et resultat og dets bevis på denne måde. Vi giver nogle eksempler:
     - Hvilke antagelser er der på målene $\mu$ og $\nu$ for at kunne bruge Tonellis eller Fubinis sætninger til at bytte om på integrationsrækkefølgen i et itereret integral? Vi anvender her produktmålet $\mu \otimes \nu$, så $\mu$ og $\nu$ skal være $\sigma$-endelige, ellers giver $\mu \otimes \nu$ ikke mening.
     - Hvorfor giver $\mu \otimes \nu$ kun mening hvis $\mu$ og $\nu$ er $\sigma$-endelige? Husk at vi konstruerer produktmålet ved en eksplicit formel, og vi har her brug for at f.eks. funktionen $x \mapsto \mu(U_x)$ er målelig. Vi viser dette vha. Dynkins lemma, så vi skal vise at systemet af mængder $U$ så $x \mapsto \mu(U_x)$ er målelig, er et $\delta$-system. Altså skal vi kunne tage differencen $U \setminus V$ af to mængder, hvilket betyder at vi skal betragte $\mu(U_x) - \mu(V_x)$. Men så skal $\mu$ være endeligt! Først *derefter* udvider vi resultatet til $\sigma$-endelige mål.
     - Hvorfor er kontinuerte funktioner målelige? Fordi kontinuitet og målelighed begge har at gøre med urbilleder, og fordi Borelalgebraen netop er frembragt af de åbne mængder.
@@ -341,7 +348,11 @@ TODO
 
 #### Kapitel 3: Konstruktion af mål
 
-TODO
+- Lemma 3.2.3: Egenskaberne i dette lemma tages også nogle gange som *definitionen* på et ydre mål, hvorefter Definition 3.2.1 blot er et eksempel på en måde hvorpå vi kan konstruere ydre mål. (I visse sammenhænge er det nyttigt at konstruere ydre mål på andre måder.)
+- Sætning 3.3.3: Vi har egentlig kun brug for del (iii) i tilfældet hvor $\mathfrak{m}$ er et ydre mål. Beviset for Carathéodorys lemma er en klassiker, og det er måske en god idé at have en idé om hvordan beviset forløber, men I bliver sikkert ikke spurgt ind til det.
+- Hovedsætning 3.4.2: Læg mærke til at del (a) og (b) udelukkende omhandler mængdesystemet $\mathcal{J}$ (de siger at $\mathcal{J}$ er en såkaldt *semiring*). Bemærk også at del (c) og (d) er hinandens "omvendte", men at vi i del (c) selvfølgelig er nødt til at antage at mængderne $G_j$ er disjunkte.
+- Sætning 3.5.1: Jeg ved ikke hvor vigtig dette resultat er i en eksamenssituation, men Heine-Borels sætning er helt central i topologi: I er vant til at begrebet *kompakt* betyder at enhver følge har en konvergent delfølge, og Bolzano-Weierstrass' sætning fortæller at i $\mathbb{R}^d$ er dette ækvivalent til at være lukket og begrænset. Der findes også en anden karakterisation af kompakthed som er mere anvendig i generelle topologiske rum, hvorved en mængde $A$ er kompakt hvis der givet en vilkårlig familie $\mathcal{G}$ af åbne mængder med $A \subseteq \bigcup_{G \in \mathcal{G}} G$ (da kaldes $\mathcal{G}$ for en *åben overdækning* af $A$) findes en *endelig* delfamilie $\mathcal{G}_0$ af $\mathcal{G}$ således at $A \subseteq \bigcup_{G \in \mathcal{G}_0} G$ (så $\mathcal{G}_0$ er en *endelig deloverdækning*). Sætning 3.5.1 er da specialtilfældet hvor alle mængder i $\mathcal{G}$ er begrænsede intervaller. (Det er ikke meget sværere at vise Heine-Borels sætning i fuld generalitet, men det behøver I ikke tænke på.)
+- Hovedsætning 3.5.3 og Korollar 3.5.5: Endelig når vi eksistensen af Lebesguemålet! Husk at vi definerer Lebesguemålet på $\mathbb{R}^d$ som produktmålet $\lambda^{\otimes d}$.
 
 #### Kapitel 4: Målelige funktioner og afbildninger
 
@@ -422,6 +433,7 @@ De fleste resultater i dette kapitel er mere eller mindre oplagte generalisering
 
 #### Kapitel 13: Grundlæggende begreber i sandsynlighedsteori
 
+TODO
 
 ### Spørgsmål
 
