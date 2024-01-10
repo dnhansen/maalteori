@@ -428,12 +428,18 @@ De fleste resultater i dette kapitel er mere eller mindre oplagte generalisering
 - Sætning 12.3.1 og Sætning 12.3.2: Beviset for Sætning 12.3.1 virker umiddelbart mere teknisk end det er, fordi Steen insisterer på eksplicit at indføre størrelsen $\epsilon (2R+2)^{-1/p}$. Ellers minder argumentet om mange andre analyseargumenter, idet vi først viser at resultatet gælder for kontinuerte funktioner og derefter approksimerer mere generelle funktioner med kontinuerte funktioner. I beviset for Sætning 12.3.2 får vi den gode idé at skrive $-1$ som $e^{-i\pi}$. Bemærk at vi ikke rigtig bruger Riemann-Lebesgues lemma til noget, men det er trods dette et vigtigt resultat som I i hvert fald bør huske på.
 - Sætning 12.4.1: Bemærk at dette er en slags $\mathcal{L}^p$-analog til Sætning 12.2.5(iii), og denne anvendes da også i beviset. Omtales yderligere [nedenfor](#spørgsmål).
 - Hovedsætning 12.4.2 og Korollar 12.4.4: Omtales [nedenfor](#spørgsmål).
-- Sætning 12.5.1 og Lemma 12.5.2: Disse er tekniske resultater, og deres primære rolle er som hjælperesultater til beviset for Plancherels sætning. I bliver forhåbentlig ikke spurgt ind til beviserne.
+- Sætning 12.5.1 og Lemma 12.5.2: Disse er tekniske resultater, og deres primære rolle er som hjælperesultater til beviset for Plancherels sætning. I bliver forhåbentlig ikke spurgt ind til beviserne. Her er beviset for Sætning 12.5.1 ret teknisk, men beviset for Lemma 12.5.2(ii) er ikke så svært at forstå overfladisk (og del (i) er ligetil).
 - Hovedsætning 12.5.3: Omtales [nedenfor](#spørgsmål).
 
 #### Kapitel 13: Grundlæggende begreber i sandsynlighedsteori
 
-TODO
+- Afsnit 13.2: Det er en smule svært at holde styr på den logiske progression i Steens præsentation af diskrete stokatiske variable. Bedst er nok at få en god forståelse for hvordan de vigtige begreber anvendes: Diskret støtte (Bemærkning 13.2.2) og sandsynlighedsfunktion (Sætning 13.2.5 og 13.2.6). Læg desuden mærke til at den alternative karakterisation i Sætning 13.2.6 viser at diskrete og absolut kontinuerte stokatiske variable begge har at gøre med tætheder mht. diverse mål. Sætning 13.2.9 er også vigtig at kunne. Diskrete stokatiske vektorer er begrebsmæssigt meget lig diskrete stokatiske variable.
+- Afsnit 13.3: Igen er det vigtigst at få styr på begreberne. Sammenlign Sætning 13.3.6 og Sætning 13.2.6.
+- Sætning 13.5.3 og Korollar 13.5.4: Ekstremt vigtige resultater som bruges igen og igen.
+- Korollar 13.5.5: Et fundamentalt resultat som er svært at forstå når det er skrevet ned, men som ellers er meget naturligt. Kort sagt, hvis vi grupperer uafhængige stokastiske variable af transformerer hver gruppe, så forbliver de uafhængige (hvilket gerne må give intuitivt mening).
+- Korollar 13.5.6: Her er det måske meget godt at kunne del (i). Derefter følger del (ii) ved induktion så snart man kender Korollar 13.5.5.
+- Sætning 13.6.1: Omtales [nedenfor](#spørgsmål).
+- Afsnit 13.7: Det er svært at få en god forståelse af begreberne i dette afsnit.
 
 ### Spørgsmål
 
@@ -453,6 +459,14 @@ TODO
 
 8. **Fouriertransformationen og inversionssætningen.** Definér gerne Fouriertransformationen (for funktioner i $\mathcal{L}^1_\mathbb{C}(\lambda)$), ellers skal Hovedsætning 12.4.2 bevises, og der er nok ikke tid til meget andet. Men husk også og nævn evt. Opgave 12.3 og Korollar 12.4.4.
 
-9. **Plancherels sætning.** TODO
+9. **Plancherels sætning.** Her skal Hovedsætning 12.5.3 selvfølgelig bevises. Beviset for denne kan let virke uoverskueligt, men læg mærke til den overordnede struktur:
+   - Vi starter med at definere Fouriertransformationen $\mathsf{F}_0$ på $Y_0$ og ønsker at udvide denne til hele $\mathcal{L}^2_\mathbb{C}(\lambda)$.
+   - Vi bruger da tætheden af $Y_0$ deri (jf. Lemma 12.5.2(i)) til at lave denne udvidelse $\mathsf{F}_2$, idet vi også tjekker at der er en entydig måde at gøre dette på.
+   - Dernæst vises det at $\mathsf{F}_2$ er lineær, hvilket gøres ved at bruge linearitet af $\mathsf{F}_0$ samt definitionen på $\mathsf{F}_2$.
+   - Derefter viser vi at $\mathsf{F}_2$ er en isometri (som $\mathsf{F}_0$ allerede er pga. Sætning 12.5.1). Dermed er den også automatisk injektiv.
+   - Surjektivitet vises da vha. Lemma 12.5.2(ii).
+   - Til sidst vises entydighed.
+ 
+   Der er nok ikke tid til at komme ind på beviserne for Sætning 12.5.1 og Lemma 12.5.2.
 
-10. **Uafhængige stokastiske variable og store tals lov**. TODO
+10. **Uafhængige stokastiske variable og store tals lov**. Her skal Sætning 13.6.1 selvfølgelig bevises, og der er nok ikke tid til meget andet. Første del af spørgsmålet kan inddrages på flere måder, men det sker ret naturligt i beviset for Sætning 13.6.1, idet vi anvender de vigtige resultater Korollar 13.5.5 og 13.5.6. Har man tid tilovers, kan man måske snakke om disse resultater, eller måske endda om frekvensfortolkningen i Korollar 13.6.2 som en konsekvens af Sætning 13.6.1.
